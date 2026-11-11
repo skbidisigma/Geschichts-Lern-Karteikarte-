@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Karteikarten: Nationalsozialismus 1933–1941</title>
+<meta name="description" content="Karteikarten zum Lernen der wichtigsten Daten und Ereignisse 1933–1941.">
+<meta name="theme-color" content="#1b2330">
+<style>
+:root {
+  --ink: #1b2330; --muted: #5c6674; --line: #dfe3e9; --bg: #f3f5f8; --card: #ffffff;
+  --innen: #1d4f80; --innen-soft: #e7eff7; --aussen: #9a4a1f; --aussen-soft: #f8ece3;
+  --ok: #2f8a58; --ok-soft: #e6f4ec; --no: #c8463a; --no-soft: #fdeceb;
+  --c: var(--innen); --soft: var(--innen-soft);
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; height: 100%; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, Roboto, "Helvetica Neue", Arial, sans-serif;
+  color: var(--ink); background: var(--bg); line-height: 1.45; -webkit-text-size-adjust: 100%;
+}
+button { font: inherit; color: inherit; cursor: pointer; border: 0; background: none; }
+button:focus-visible, .cardwrap:focus-visible { outline: 3px solid #f0b429; outline-offset: 3px; }
+.app { max-width: 720px; margin: 0 auto; padding: 18px 16px calc(28px + env(safe-area-inset-bottom)); min-height: 100%; display: flex; flex-direction: column; gap: 16px; }
+
+header.top { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+.brand { display: flex; align-items: center; gap: 10px; min-width: 0; }
+.logo { flex: none; width: 38px; height: 38px; border-radius: 9px; background: var(--ink); color: #fff; font-weight: 800; display: grid; place-items: center; font-size: 11px; letter-spacing: -0.01em; white-space: nowrap; }
+.brand h1 { font-size: 17px; line-height: 1.2; margin: 0; letter-spacing: -0.01em; }
+.brand p { margin: 0; font-size: 12.5px; color: var(--muted); }
+.ghost { font-size: 13px; font-weight: 600; color: var(--muted); padding: 8px 10px; border-radius: 8px; }
+.ghost:hover { background: #e6e9ee; color: var(--ink); }
+
+.panel { background: var(--card); border: 1px solid var(--line); border-radius: 14px; padding: 16px; }
+.panel h2 { font-size: 12px; letter-spacing: 0.09em; text-transform: uppercase; color: var(--muted); margin: 0 0 10px; }
+.row { display: flex; flex-wrap: wrap; gap: 8px; }
+.chip { padding: 9px 13px; border-radius: 999px; border: 1.5px solid var(--line); background: #fff; font-size: 14px; font-weight: 600; color: var(--muted); }
+.chip[aria-pressed="true"] { border-color: var(--ink); background: var(--ink); color: #fff; }
+.chip .n { font-weight: 500; opacity: 0.7; margin-left: 4px; }
+.primary { width: 100%; padding: 15px; border-radius: 12px; background: var(--ink); color: #fff; font-weight: 700; font-size: 16px; }
+.primary:hover { background: #0f1520; }
+.primary:disabled { opacity: 0.4; cursor: not-allowed; }
+.secondary { width: 100%; padding: 13px; border-radius: 12px; background: #fff; border: 1.5px solid var(--line); font-weight: 650; font-size: 15px; }
+.secondary:hover { border-color: var(--ink); }
+.stack { display: flex; flex-direction: column; gap: 14px; }
+
+.overall { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; text-align: center; }
+.overall div { background: var(--bg); border-radius: 10px; padding: 10px 6px; }
+.overall b { display: block; font-size: 22px; line-height: 1.1; font-variant-numeric: tabular-nums; }
+.overall span { font-size: 12px; color: var(--muted); }
+.overall .g b { color: var(--ok); } .overall .r b { color: var(--no); }
+
+/* Lernen */
+.progress { display: flex; align-items: center; gap: 12px; font-size: 13px; color: var(--muted); font-variant-numeric: tabular-nums; }
+.bar { flex: 1; height: 8px; border-radius: 99px; background: #e1e5ea; overflow: hidden; display: flex; }
+.bar i { display: block; height: 100%; transition: width .3s ease; }
+.bar .g { background: var(--ok); } .bar .r { background: var(--no); }
+
+.cardwrap { perspective: 1400px; flex: none; height: min(54vh, 430px); min-height: 300px; cursor: pointer; border-radius: 18px; -webkit-tap-highlight-color: transparent; }
+.card { position: relative; width: 100%; height: 100%; min-height: 300px; transform-style: preserve-3d; transition: transform .5s cubic-bezier(.3,.8,.3,1); }
+.card.flipped { transform: rotateY(180deg); }
+.face { position: absolute; inset: 0; backface-visibility: hidden; -webkit-backface-visibility: hidden; background: var(--card); border: 1px solid var(--line); border-radius: 18px; padding: 22px 22px 18px; display: flex; flex-direction: column; box-shadow: 0 1px 2px rgba(20,30,50,.05), 0 10px 28px rgba(20,30,50,.08); overflow: hidden; }
+.face::before { content: ""; position: absolute; left: 0; right: 0; top: 0; height: 7px; background: var(--c); }
+.face.back { transform: rotateY(180deg); background: var(--soft); }
+.tag { align-self: flex-start; font-size: 11.5px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--c); background: var(--soft); border-radius: 6px; padding: 3px 8px; margin-top: 4px; }
+.face.back .tag { background: #fff; }
+.q { flex: 1; display: flex; flex-direction: column; justify-content: center; text-align: center; gap: 10px; padding: 8px 0; }
+.q .ask { font-size: 13px; color: var(--muted); font-weight: 600; }
+.q .main { font-size: clamp(22px, 5.4vw, 31px); line-height: 1.2; font-weight: 800; letter-spacing: -0.015em; text-wrap: balance; }
+.q .main.date { font-size: clamp(32px, 9vw, 50px); color: var(--c); font-variant-numeric: tabular-nums; }
+.q .sub { font-size: 15px; color: var(--ink); font-weight: 600; }
+.q .info { font-size: 14.5px; color: #3a4553; max-width: 46ch; margin: 2px auto 0; text-wrap: pretty; }
+.hint { text-align: center; font-size: 12.5px; color: var(--muted); }
+
+.answer { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.answer button { padding: 16px 10px; border-radius: 13px; font-weight: 750; font-size: 16px; border: 2px solid; display: flex; align-items: center; justify-content: center; gap: 8px; }
+.btn-no { background: var(--no-soft); border-color: var(--no); color: #9c2a1f; }
+.btn-ok { background: var(--ok-soft); border-color: var(--ok); color: #1e6a41; }
+.btn-no:hover { background: #fbd9d6; } .btn-ok:hover { background: #d3ecdd; }
+.answer.wait { display: block; }
+.kbd { font-size: 11px; font-weight: 600; opacity: .6; border: 1px solid currentColor; border-radius: 4px; padding: 0 5px; }
+@media (hover: none) { .kbd { display: none; } }
+
+/* Ergebnis + Liste */
+.big { text-align: center; padding: 8px 0 2px; }
+.big .pct { font-size: 56px; font-weight: 800; line-height: 1; letter-spacing: -0.03em; }
+.big p { margin: 6px 0 0; color: var(--muted); }
+.list { display: flex; flex-direction: column; }
+.item { display: grid; grid-template-columns: 92px 1fr auto; gap: 10px; align-items: baseline; padding: 10px 2px; border-top: 1px solid var(--line); font-size: 14.5px; }
+.item:first-child { border-top: 0; }
+.item .d { font-weight: 750; font-variant-numeric: tabular-nums; }
+.item.innen .d { color: var(--innen); } .item.aussen .d { color: var(--aussen); }
+.item small { display: block; color: var(--muted); font-size: 12.5px; }
+.dot { width: 10px; height: 10px; border-radius: 50%; background: #cfd5dd; align-self: center; }
+.dot.g { background: var(--ok); } .dot.r { background: var(--no); }
+.legend { display: flex; gap: 14px; flex-wrap: wrap; font-size: 12.5px; color: var(--muted); margin-bottom: 6px; }
+.legend i { display: inline-block; width: 9px; height: 9px; border-radius: 50%; margin-right: 5px; }
+[hidden] { display: none !important; }
+footer { text-align: center; font-size: 12px; color: var(--muted); margin-top: auto; padding-top: 8px; }
+@media (prefers-reduced-motion: reduce) { .card, .bar i { transition: none; } }
+</style>
+</head>
+<body>
+<div class="app">
+  <header class="top">
+    <div class="brand">
+      <div class="logo" aria-hidden="true">33–41</div>
+      <div><h1>Karteikarten Geschichte</h1><p>Nationalsozialismus 1933–1941</p></div>
+    </div>
+    <button class="ghost" id="homeBtn" hidden>← Übersicht</button>
+  </header>
+
+  <!-- START -->
+  <main id="home" class="stack">
+    <section class="panel">
+      <h2>Dein Stand</h2>
+      <div class="overall">
+        <div class="g"><b id="stKnown">0</b><span>gewusst</span></div>
+        <div class="r"><b id="stUnknown">0</b><span>nicht gewusst</span></div>
+        <div><b id="stNew">0</b><span>noch neu</span></div>
+      </div>
+    </section>
+
+    <section class="panel stack">
+      <div>
+        <h2>Welche Karten?</h2>
+        <div class="row" id="deckRow"></div>
+      </div>
+      <div>
+        <h2>Was steht vorne?</h2>
+        <div class="row" id="dirRow">
+          <button class="chip" data-dir="event">Ereignis → Datum</button>
+          <button class="chip" data-dir="date">Datum → Ereignis</button>
+          <button class="chip" data-dir="mix">Gemischt</button>
+        </div>
+      </div>
+      <button class="primary" id="startBtn">Lernen starten</button>
+      <button class="secondary" id="listBtn">Alle Daten als Liste ansehen</button>
+    </section>
+    <button class="ghost" id="resetBtn" style="align-self:center">Fortschritt zurücksetzen</button>
+  </main>
+
+  <!-- LERNEN -->
+  <main id="study" class="stack" style="flex:1" hidden>
+    <div class="progress"><span id="pCount">1 / 10</span><div class="bar"><i class="g" id="pG"></i><i class="r" id="pR"></i></div><span id="pLeft"></span></div>
+    <div class="cardwrap" id="cardwrap" tabindex="0" role="button" aria-label="Karte umdrehen">
+      <div class="card" id="card">
+        <div class="face front"><span class="tag" id="fTag"></span><div class="q" id="fBody"></div><div class="hint">Tippen zum Umdrehen</div></div>
+        <div class="face back"><span class="tag" id="bTag"></span><div class="q" id="bBody"></div></div>
+      </div>
+    </div>
+    <div class="answer wait" id="answer">
+      <button class="primary" id="flipBtn">Umdrehen <span class="kbd">Leertaste</span></button>
+    </div>
+  </main>
+
+  <!-- ERGEBNIS -->
+  <main id="result" class="stack" hidden>
+    <section class="panel">
+      <div class="big"><div class="pct" id="rPct">0 %</div><p id="rText"></p></div>
+    </section>
+    <button class="primary" id="againWrong">Nicht gewusste wiederholen</button>
+    <button class="secondary" id="againAll">Gleiche Auswahl noch einmal</button>
+    <section class="panel" id="rWrongPanel">
+      <h2>Das solltest du dir noch einmal ansehen</h2>
+      <div class="list" id="rWrong"></div>
+    </section>
+  </main>
+
+  <!-- LISTE -->
+  <main id="listView" class="stack" hidden>
+    <section class="panel">
+      <h2>Alle Daten 1933–1941</h2>
+      <div class="legend">
+        <span><i style="background:var(--innen)"></i>Innenpolitik</span>
+        <span><i style="background:var(--aussen)"></i>Außenpolitik</span>
+        <span><i style="background:var(--ok)"></i>zuletzt gewusst</span>
+        <span><i style="background:var(--no)"></i>zuletzt nicht gewusst</span>
+      </div>
+      <div class="list" id="allList"></div>
+    </section>
+  </main>
+
+  <footer>Dein Fortschritt wird nur in diesem Browser gespeichert.</footer>
+</div>
+
+<script>
+/* k = Kerndatum (sollte man sicher können), t = Thema */
+const CARDS = [
+  {id:"kanzler",   d:"30.01.1933", e:"Hitler wird Reichskanzler", i:"Reichspräsident Hindenburg ernennt ihn – formal legal, keine „Machtergreifung“.", t:"innen", k:1},
+  {id:"brand",     d:"27.02.1933", e:"Reichstagsbrand", i:"Die Nazis stellen ihn als kommunistischen Umsturzversuch dar. Festgenommen: Marinus van der Lubbe.", t:"innen", k:1},
+  {id:"brandvo",   d:"28.02.1933", e:"Reichstagsbrandverordnung", i:"Notverordnung „zum Schutz von Volk und Staat“: Grundrechte außer Kraft, „Schutzhaft“ ohne Anklage.", t:"innen", k:1},
+  {id:"wahl",      d:"05.03.1933", e:"Reichstagswahl", i:"NSDAP 43,9 %, DNVP 8 % – trotz Terror keine Zweidrittelmehrheit.", t:"innen", k:1},
+  {id:"ermaecht",  d:"23.03.1933", e:"Ermächtigungsgesetz", i:"Die Regierung darf Gesetze ohne den Reichstag erlassen. Ende der Gewaltenteilung.", t:"innen", k:1},
+  {id:"wels",      d:"23.03.1933", e:"Rede von Otto Wels (SPD) im Reichstag", i:"„Freiheit und Leben kann man uns nehmen, die Ehre nicht.“ Nur die SPD stimmt gegen das Ermächtigungsgesetz.", t:"innen", k:1},
+  {id:"buecher",   d:"10.05.1933", e:"Bücherverbrennungen", i:"Werke jüdischer, kommunistischer und pazifistischer Autoren werden öffentlich verbrannt.", t:"innen", k:1},
+  {id:"spd",       d:"Juni 1933",  e:"Verbot der SPD", i:"Wenige Monate nach ihrem Nein zum Ermächtigungsgesetz (22.06.1933).", t:"innen", k:0},
+  {id:"voelkerbund",d:"14.10.1933",e:"Austritt aus dem Völkerbund", i:"Begründung: fehlende militärische Gleichberechtigung. Danach steigen die Militärausgaben stark.", t:"aussen", k:0},
+  {id:"polenpakt", d:"26.01.1934", e:"Nichtangriffspakt mit Polen", i:"Wirkt wie ein Friedenszeichen. 1939 kündigt Hitler den Pakt und überfällt Polen.", t:"aussen", k:0},
+  {id:"saar",      d:"13.01.1935", e:"Saarabstimmung", i:"91 % stimmen für die Rückkehr ins Reich – im Versailler Vertrag vorgesehen, also rechtmäßig.", t:"aussen", k:0},
+  {id:"wehrpflicht",d:"16.03.1935",e:"Wiedereinführung der allgemeinen Wehrpflicht", i:"Erster offener Bruch des Versailler Vertrags. Senkt auch die Arbeitslosenzahl.", t:"aussen", k:1},
+  {id:"flotte",    d:"18.06.1935", e:"Deutsch-britisches Flottenabkommen", i:"Die deutsche Flotte darf 35 % der britischen erreichen. Großbritannien akzeptiert damit die Aufrüstung.", t:"aussen", k:0},
+  {id:"rad",       d:"26.06.1935", e:"Reichsarbeitsdienst (RAD) wird Pflicht", i:"Halbjähriger Pflichtdienst für Männer von 18 bis 25. Sie zählen nicht mehr als arbeitslos.", t:"innen", k:1},
+  {id:"nuernberg", d:"15.09.1935", e:"Nürnberger Gesetze", i:"Reichsbürgergesetz und „Blutschutzgesetz“: Juden werden entrechtet, Ehen mit Nichtjuden verboten.", t:"innen", k:1},
+  {id:"vo1935",    d:"14.11.1935", e:"1. Verordnung zum Reichsbürgergesetz", i:"Legt fest, wer als „Jude“ gilt (nach den Großeltern). Juden verlieren Wahlrecht und öffentliche Ämter.", t:"innen", k:0},
+  {id:"rheinland", d:"07.03.1936", e:"Einmarsch ins entmilitarisierte Rheinland", i:"Bruch der Verträge von Versailles und Locarno. Frankreich und Großbritannien greifen nicht ein.", t:"aussen", k:0},
+  {id:"vierjahr",  d:"August 1936",e:"Vierjahresplan (geheime Denkschrift Hitlers)", i:"Armee soll in vier Jahren einsatzfähig, die Wirtschaft kriegsfähig sein. Ziel: Autarkie.", t:"innen", k:1},
+  {id:"achse",     d:"25.10.1936", e:"Freundschaftsvertrag mit Italien", i:"„Achse Berlin–Rom“. Hintergrund: gemeinsame Hilfe für Franco im Spanischen Bürgerkrieg.", t:"aussen", k:0},
+  {id:"antikomintern", d:"November 1936", e:"Antikominternpakt mit Japan", i:"Bündnis gegen die Sowjetunion. 1937 tritt Italien bei.", t:"aussen", k:0},
+  {id:"guernica",  d:"26.04.1937", e:"Bombardierung von Guernica", i:"Deutsche Flugzeuge zerstören die baskische Stadt im Spanischen Bürgerkrieg.", t:"aussen", k:0},
+  {id:"geheimrede",d:"November 1937", e:"Hitlers Geheimrede vor den Generälen", i:"Er kündigt eine „kriegerische Lösung“ der „Raumfrage“ an. Erste Ziele: Österreich und Tschechoslowakei.", t:"aussen", k:0},
+  {id:"anschluss", d:"12./13.03.1938", e:"„Anschluss“ Österreichs", i:"12.03. Einmarsch deutscher Truppen, 13.03. wird Österreich Teil des Reichs („Ostmark“).", t:"aussen", k:1},
+  {id:"berchtesgaden", d:"15.09.1938", e:"Hitler droht Chamberlain in der Sudetenkrise", i:"Er will die Sudetendeutschen „ins Reich“ holen – notfalls um den Preis eines Weltkriegs.", t:"aussen", k:0},
+  {id:"csrnote",   d:"21.09.1938", e:"Die CSR gibt dem Druck nach", i:"Auf Drängen Frankreichs und Englands nimmt sie die Vorschläge „mit Bitternis“ an.", t:"aussen", k:0},
+  {id:"muenchen",  d:"29./30.09.1938", e:"Münchener Konferenz", i:"Hitler, Mussolini, Chamberlain, Daladier – ohne die CSR. Das Sudetenland fällt an Deutschland. Höhepunkt der Appeasement-Politik.", t:"aussen", k:1},
+  {id:"kinoverbot",d:"12.11.1938", e:"Juden wird der Besuch von Theatern, Kinos und Konzerten verboten", i:"Ein Beispiel dafür, wie Juden Schritt für Schritt aus dem öffentlichen Leben ausgeschlossen wurden.", t:"innen", k:0},
+  {id:"prag",      d:"15.03.1939", e:"Einmarsch in die „Rest-Tschechei“", i:"Hitler bricht sein Münchener Versprechen. Die Appeasement-Politik ist gescheitert.", t:"aussen", k:0},
+  {id:"pakt",      d:"23.08.1939", e:"Hitler-Stalin-Pakt", i:"Nichtangriffspakt für 10 Jahre. Geheimes Zusatzprotokoll: Osteuropa wird in Interessensphären aufgeteilt.", t:"aussen", k:1},
+  {id:"polen",     d:"01.09.1939", e:"Deutscher Überfall auf Polen", i:"Beginn des Zweiten Weltkriegs.", t:"aussen", k:1},
+  {id:"kriegserkl",d:"03.09.1939", e:"Großbritannien und Frankreich erklären Deutschland den Krieg", i:"Folge der Garantie, die England Polen gegeben hatte.", t:"aussen", k:0},
+  {id:"ostpolen",  d:"17.09.1939", e:"Die Sowjetunion marschiert in Ostpolen ein", i:"Wie im geheimen Zusatzprotokoll abgesprochen.", t:"aussen", k:0},
+  {id:"grenzvertrag", d:"28.09.1939", e:"Deutsch-sowjetischer Grenz- und Freundschaftsvertrag", i:"Polen ist aufgeteilt. Litauen fällt jetzt an die sowjetische Sphäre, Deutschland erhält Gebiete bis zum Bug.", t:"aussen", k:0},
+  {id:"weisung21", d:"18.12.1940", e:"Weisung Nr. 21", i:"Hitler lässt den Angriff auf die Sowjetunion planen („Unternehmen Barbarossa“) – trotz Pakt.", t:"aussen", k:0},
+  {id:"barbarossa",d:"22.06.1941", e:"Überfall auf die Sowjetunion", i:"Der Hitler-Stalin-Pakt ist gebrochen. Beginn des Vernichtungskriegs im Osten.", t:"aussen", k:1}
+];
+
+const DECKS = [
+  {id:"all",    name:"Alle",          f:c => true},
+  {id:"core",   name:"Nur Kerndaten", f:c => c.k},
+  {id:"innen",  name:"Innenpolitik",  f:c => c.t === "innen"},
+  {id:"aussen", name:"Außenpolitik",  f:c => c.t === "aussen"},
+  {id:"weak",   name:"Nicht gewusste",f:c => prog[c.id] === 0}
+];
+const TOPIC = {innen:"Innenpolitik", aussen:"Außenpolitik"};
+const KEY = "ns-karteikarten-v1";
+const $ = id => document.getElementById(id);
+
+/* ---- Speicher (nur dieser Browser) ---- */
+let prog = {}, prefs = {deck:"all", dir:"event"};
+try { const s = JSON.parse(localStorage.getItem(KEY) || "{}"); prog = s.prog || {}; prefs = Object.assign(prefs, s.prefs || {}); } catch (e) {}
+function save() { try { localStorage.setItem(KEY, JSON.stringify({prog, prefs})); } catch (e) {} }
+
+/* ---- Startseite ---- */
+function renderHome() {
+  const known = CARDS.filter(c => prog[c.id] === 1).length, unknown = CARDS.filter(c => prog[c.id] === 0).length;
+  $("stKnown").textContent = known; $("stUnknown").textContent = unknown; $("stNew").textContent = CARDS.length - known - unknown;
+  if (prefs.deck === "weak" && unknown === 0) prefs.deck = "all";
+  $("deckRow").innerHTML = "";
+  DECKS.forEach(d => {
+    const n = CARDS.filter(d.f).length;
+    if (d.id === "weak" && n === 0) return;
+    const b = document.createElement("button");
+    b.className = "chip"; b.setAttribute("aria-pressed", prefs.deck === d.id);
+    b.innerHTML = d.name + '<span class="n">' + n + "</span>";
+    b.onclick = () => { prefs.deck = d.id; save(); renderHome(); };
+    $("deckRow").appendChild(b);
+  });
+  document.querySelectorAll("#dirRow .chip").forEach(b => {
+    b.setAttribute("aria-pressed", prefs.dir === b.dataset.dir);
+    b.onclick = () => { prefs.dir = b.dataset.dir; save(); renderHome(); };
+  });
+}
+
+/* ---- Lernrunde ---- */
+let queue = [], total = 0, right = [], wrong = [], current = null, flipped = false, lastSet = [];
+function shuffle(a) { for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; }
+function start(cards) {
+  if (!cards.length) return;
+  lastSet = cards.slice();
+  queue = shuffle(cards.map(c => ({c, front: prefs.dir === "mix" ? (Math.random() < 0.5 ? "event" : "date") : prefs.dir})));
+  total = queue.length; right = []; wrong = [];
+  show("study"); next();
+}
+function next() {
+  if (!queue.length) return finish();
+  current = queue.shift(); flipped = false;
+  const {c, front} = current, card = $("card");
+  card.style.transition = "none"; card.classList.remove("flipped"); void card.offsetWidth; card.style.transition = "";
+  const wrap = $("cardwrap");
+  wrap.style.setProperty("--c", "var(--" + c.t + ")"); wrap.style.setProperty("--soft", "var(--" + c.t + "-soft)");
+  $("fTag").textContent = $("bTag").textContent = TOPIC[c.t];
+  if (front === "event") {
+    $("fBody").innerHTML = '<div class="ask">Wann war das?</div><div class="main">' + c.e + "</div>";
+    $("bBody").innerHTML = '<div class="main date">' + c.d + '</div><div class="sub">' + c.e + '</div><div class="info">' + c.i + "</div>";
+  } else {
+    $("fBody").innerHTML = '<div class="ask">Was geschah an diesem Tag?</div><div class="main date">' + c.d + "</div>";
+    $("bBody").innerHTML = '<div class="main">' + c.e + '</div><div class="sub" style="color:var(--c)">' + c.d + '</div><div class="info">' + c.i + "</div>";
+  }
+  renderAnswer(); renderProgress();
+}
+function renderProgress() {
+  const done = right.length + wrong.length;
+  $("pCount").textContent = Math.min(done + 1, total) + " / " + total;
+  $("pG").style.width = (right.length / total * 100) + "%"; $("pR").style.width = (wrong.length / total * 100) + "%";
+  $("pLeft").textContent = "✓ " + right.length + "  ✗ " + wrong.length;
+}
+function renderAnswer() {
+  const a = $("answer");
+  if (!flipped) {
+    a.className = "answer wait";
+    a.innerHTML = '<button class="primary" id="flipBtn">Umdrehen <span class="kbd">Leertaste</span></button>';
+    $("flipBtn").onclick = flip;
+  } else {
+    a.className = "answer";
+    a.innerHTML = '<button class="btn-no" id="noBtn">✗ Nicht gewusst <span class="kbd">1</span></button><button class="btn-ok" id="okBtn">✓ Gewusst <span class="kbd">2</span></button>';
+    $("noBtn").onclick = () => rate(0); $("okBtn").onclick = () => rate(1);
+  }
+}
+function flip() { if (!current) return; flipped = !flipped; $("card").classList.toggle("flipped", flipped); if (flipped) renderAnswer(); }
+function rate(v) {
+  if (!current || !flipped) return;
+  prog[current.c.id] = v; save();
+  (v ? right : wrong).push(current.c);
+  current = null; next();
+}
+function finish() {
+  const pct = Math.round(right.length / total * 100);
+  $("rPct").textContent = pct + " %"; $("rPct").style.color = pct >= 80 ? "var(--ok)" : pct >= 50 ? "#b7791f" : "var(--no)";
+  $("rText").textContent = right.length + " von " + total + " gewusst" + (pct === 100 ? " – alles richtig!" : pct >= 80 ? " – stark!" : pct >= 50 ? " – schon ganz gut." : " – dranbleiben, das wird.");
+  $("againWrong").hidden = wrong.length === 0; $("rWrongPanel").hidden = wrong.length === 0;
+  $("rWrong").innerHTML = wrong.map(itemHTML).join("");
+  show("result");
+}
+function itemHTML(c) {
+  const s = prog[c.id];
+  return '<div class="item ' + c.t + '"><span class="d">' + c.d + "</span><span>" + c.e + "<small>" + c.i + '</small></span><span class="dot ' + (s === 1 ? "g" : s === 0 ? "r" : "") + '"></span></div>';
+}
+
+/* ---- Ansichten ---- */
+function show(id) {
+  ["home", "study", "result", "listView"].forEach(v => $(v).hidden = v !== id);
+  $("homeBtn").hidden = id === "home";
+  if (id === "home") renderHome();
+  if (id === "listView") $("allList").innerHTML = CARDS.map(itemHTML).join("");
+  window.scrollTo(0, 0);
+}
+$("startBtn").onclick = () => start(CARDS.filter(DECKS.find(d => d.id === prefs.deck).f));
+$("listBtn").onclick = () => show("listView");
+$("homeBtn").onclick = () => show("home");
+$("againWrong").onclick = () => start(wrong.slice());
+$("againAll").onclick = () => start(lastSet);
+$("cardwrap").onclick = flip;
+$("resetBtn").onclick = () => {
+  const b = $("resetBtn");
+  if (b.dataset.sure) { prog = {}; save(); delete b.dataset.sure; b.textContent = "Fortschritt zurücksetzen"; renderHome(); }
+  else { b.dataset.sure = "1"; b.textContent = "Wirklich alles löschen? Noch einmal tippen"; setTimeout(() => { delete b.dataset.sure; b.textContent = "Fortschritt zurücksetzen"; }, 4000); }
+};
+document.addEventListener("keydown", e => {
+  if ($("study").hidden) return;
+  if (e.key === " " || e.key === "Enter") { e.preventDefault(); flip(); }
+  else if (flipped && (e.key === "1" || e.key === "ArrowLeft")) rate(0);
+  else if (flipped && (e.key === "2" || e.key === "ArrowRight")) rate(1);
+});
+renderHome();
+</script>
+</body>
+</html>
