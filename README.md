@@ -1,13 +1,9 @@
-# Karteikarten Geschichte: Nationalsozialismus 1933–1941
+# Geschichte lernen: Nationalsozialismus 1933–1941
 
-Karteikarten-App zum Lernen der wichtigsten Daten und Ereignisse.
+**Seite öffnen:** https://skbidisigma.github.io/Geschichts-Lern-Karteikarte-/
 
-**App öffnen:** https://skbidisigma.github.io/Geschichts-Lern-Karteikarte-/
+- **Karteikarten** (`index.html`): 29 Pflichtdaten vom Zeitstrahl plus 9 Daten aus der Mappe. Umdrehen oder Datum eintippen; die App merkt sich Schwächen und fragt sie öfter ab.
+- **Lernzettel** (`lernzettel.html`): anklickbarer Zeitstrahl mit Details und Merkhilfen, alle Kapitel, PDF zum Ausdrucken.
+- **So lernst du** (`lernen.html`): Lernmethoden, Merk-Muster und Plan für die letzten Tage.
 
-- 35 Karten: Ereignis auf der einen Seite, Datum auf der anderen
-- Nach dem Umdrehen „Gewusst“ oder „Nicht gewusst“ wählen
-- Auswahl: alle Karten, nur Kerndaten, Innenpolitik, Außenpolitik, nicht gewusste
-- Richtung: Ereignis → Datum, Datum → Ereignis oder gemischt
-- Der Fortschritt wird im Browser gespeichert
-
-Die ganze App steckt in `index.html`; neue Karten kommen in die Liste `CARDS`.
+Alle Daten stehen in `assets/data.js`. Der Lernstand wird nur im Browser gespeichert.

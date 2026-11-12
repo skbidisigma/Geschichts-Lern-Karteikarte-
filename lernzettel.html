@@ -1,0 +1,814 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#f3f5f8">
+<link rel="stylesheet" href="assets/site.css">
+<script src="assets/common.js"></script>
+<title>Lernzettel: Nationalsozialismus 1933–1941</title>
+<meta name="description" content="Der ganze Lernzettel mit anklickbarem Zeitstrahl: Datum antippen und Details, Bedeutung und Merkhilfe sehen.">
+</head>
+<body>
+<header class="site-head"><div class="in">
+  <div class="brandrow">
+    <a class="brand" href="./"><span class="logo" aria-hidden="true">33–41</span><span><b>Geschichte lernen</b><span>Nationalsozialismus 1933–1941</span></span></a>
+    <button id="themeBtn" aria-label="Design wechseln">
+      <svg class="sun" width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.2M12 19.3v2.2M2.5 12h2.2M19.3 12h2.2M5.3 5.3l1.6 1.6M17.1 17.1l1.6 1.6M5.3 18.7l1.6-1.6M17.1 6.9l1.6-1.6"/></svg>
+      <svg class="moon" width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"/></svg>
+    </button>
+  </div>
+  <nav class="tabs" aria-label="Bereiche">
+    <a href="./" data-tab="karten">Karteikarten</a>
+    <a href="lernzettel.html" data-tab="lernzettel">Lernzettel</a>
+    <a href="lernen.html" data-tab="lernen">So lernst du</a>
+  </nav>
+</div></header>
+
+<div class="wrap">
+  <h1 class="page">Lernzettel</h1>
+  <p class="lead">Tippe im Zeitstrahl auf ein Datum, um Details, Bedeutung und eine Merkhilfe zu sehen. Darunter stehen alle Kapitel.</p>
+
+  <section class="panel">
+    <h2>Zeitstrahl 1933–1941</h2>
+    <div class="toolbar">
+      <button class="chip" id="fAll" aria-pressed="true">Alles</button>
+      <button class="chip" id="fInnen" aria-pressed="false">Innenpolitik</button>
+      <button class="chip" id="fAussen" aria-pressed="false">Außenpolitik</button>
+      <button class="chip" id="fMappe" aria-pressed="true">Daten aus der Mappe</button>
+      <button class="chip" id="hideBtn" aria-pressed="false">Daten verdecken (Selbsttest)</button>
+    </div>
+    <p class="note" id="hideNote" hidden style="margin:10px 0 0">Selbsttest: Sag das Datum laut oder schreib es auf, dann tippe auf die Zeile zum Aufdecken.</p>
+    <div id="timeline" style="margin-top:10px"></div>
+    <p class="note" style="margin:10px 0 0">Farbig = steht auf deinem Zeitstrahl (Pflicht). Gestrichelt = zusätzliches Datum aus den Arbeitsblättern der Mappe.</p>
+  </section>
+
+  <div class="toolbar">
+    <a class="chip" href="Geschichte_NS_Lernzettel.pdf" style="text-decoration:none">PDF zum Ausdrucken (12 Seiten)</a>
+    <button class="chip" id="openAll">Alle Kapitel aufklappen</button>
+  </div>
+
+<details class="chap t-meth" id="ch-M">
+  <summary><span class="num">M</span><span><b>So gehst du bei Aufgaben vor</b><span class="s">Quellenanalyse in neun Schritten · Aufgabenwörter (Operatoren)</span></span></summary>
+  <div class="lz"><p class="mat"><b>Grundlage:</b> Schema aus deinem Heft, Aufgaben der Arbeitsblätter</p>
+
+<div>
+<h2>Quellenanalyse: immer in dieser Reihenfolge <small>Beispiel: Rede von Otto Wels</small></h2>
+<div class="tw"><table class="compact">
+<tr><th>Nr.</th><th>Schritt</th><th>Was du klärst</th><th>Beispiel Wels</th></tr>
+<tr><td class="d">1</td><td class="k">Autor, Jahr, Ort, Titel</td><td>Wer? Wann? Wo? Wie heißt die Quelle?</td><td>Otto Wels (SPD), 23.03.1933, Reichstag</td></tr>
+<tr><td class="d">2</td><td class="k">Quellengattung</td><td>Rede, Brief, Tagebuch, Gesetz, Foto, Plakat?</td><td>Rede (Auszug)</td></tr>
+<tr><td class="d">3</td><td class="k">Quellenart</td><td><b>Historische Quelle</b> (aus der Zeit selbst) oder <b>Darstellung</b> (später verfasst, z. B. Schulbuch)?</td><td>historische Quelle (Primärquelle)</td></tr>
+<tr><td class="d">4</td><td class="k">Adressat</td><td>An wen richtet sich die Quelle?</td><td>Abgeordnete, Regierung, Öffentlichkeit</td></tr>
+<tr><td class="d">5</td><td class="k">Thema</td><td>Worum geht es? (ein Satz)</td><td>Ablehnung des Ermächtigungsgesetzes</td></tr>
+<tr><td class="d">6</td><td class="k">Stil</td><td>Sachlich, warnend, fordernd, hetzerisch …?</td><td>kurze, einprägsame Sätze; warnend</td></tr>
+<tr><td class="d">7</td><td class="k">Intention</td><td>Was will der Autor erreichen?</td><td>das Nein der SPD öffentlich festhalten</td></tr>
+<tr><td class="d">8</td><td class="k">Historischer Kontext</td><td>Was war damals los? Was geschah davor?</td><td>Reichstagsbrand, Verhaftungen, Wahl</td></tr>
+<tr><td class="d">9</td><td class="k">Quellenwert</td><td>Was erfahren wir? Wo liegen die Grenzen?</td><td>hoch (letzter offener Widerspruch im Parlament); aber nur ein Auszug</td></tr>
+</table></div>
+</div>
+<div>
+<h2>Aufgabenwörter (Operatoren) <small>Je höher die Stufe, desto mehr eigenes Denken</small></h2>
+<div class="tw"><table class="compact">
+<tr><th>Stufe</th><th>Aufgabenwort</th><th>Das musst du tun</th></tr>
+<tr><td class="d" rowspan="3">I<br/><span class="muted small" style="font-weight:500">wiedergeben</span></td><td class="k">Nenne / Benenne / Liste auf</td><td>Kurz aufzählen, ohne Erklärung.</td></tr>
+<tr><td class="k">Beschreibe</td><td>Sachlich und geordnet sagen, was zu sehen oder zu lesen ist – <b>ohne Wertung</b>.</td></tr>
+<tr><td class="k">Fasse zusammen / Skizziere</td><td>Das Wichtigste gekürzt und in eigenen Worten darstellen.</td></tr>
+<tr><td class="d" rowspan="3">II<br/><span class="muted small" style="font-weight:500">erklären</span></td><td class="k">Erläutere / Erkläre</td><td>Zusammenhänge und Gründe verständlich machen, <b>mit Textstellen belegen</b>.</td></tr>
+<tr><td class="k">Charakterisiere</td><td>Die typischen Merkmale herausarbeiten und geordnet darstellen.</td></tr>
+<tr><td class="k">Vergleiche</td><td>Gemeinsamkeiten <b>und</b> Unterschiede nennen, am Ende ein Ergebnis formulieren.</td></tr>
+<tr><td class="d" rowspan="3">III<br/><span class="muted small" style="font-weight:500">urteilen</span></td><td class="k">Überprüfe</td><td>Eine Behauptung an Fakten und Materialien messen: Stimmt sie?</td></tr>
+<tr><td class="k">Beurteile</td><td>Pro und Contra abwägen, dann ein <b>begründetes Urteil</b> fällen (Sachurteil). Aufbau: Sache → dafür → dagegen → Urteil („Insgesamt …, weil …“).</td></tr>
+<tr><td class="k">Bewerte / Nimm Stellung</td><td>Wie „Beurteile“, zusätzlich mit deinen eigenen Wertmaßstäben (Werturteil).</td></tr>
+</table></div>
+</div>
+<div class="cols c2">
+<div class="box merke">
+<span class="lab">Merke: Textquellen</span>
+<ul class="tight">
+<li><b>Zeilenangaben</b> nicht vergessen: <span class="z">Z. 4–5</span></li>
+<li>Fremde Aussagen im <b>Konjunktiv</b> wiedergeben: „Wels erklärt, die SPD <b>könne</b> dem Gesetz nicht zustimmen.“ <span class="z">Z. 2–6</span></li>
+<li>Wörtliche Zitate kurz halten und in Anführungszeichen setzen.</li>
+</ul>
+</div>
+<div class="box merke">
+<span class="lab">Merke: Bildquellen</span>
+<ul class="tight">
+<li><b>Erst beschreiben</b>: Personen, Haltung, Kleidung, Hintergrund, Text.</li>
+<li><b>Dann deuten</b>: Wirkung, Absicht, Zielgruppe.</li>
+<li>Immer fragen: Ist das Bild <b>gestellt</b>? Wurde es für <b>Propaganda</b> gemacht?</li>
+</ul>
+</div>
+</div>
+
+  </div>
+</details>
+<details class="chap t-innen" id="ch-1">
+  <summary><span class="num">1</span><span><b>Wie wurde die Demokratie zerstört?</b><span class="s">30. Januar bis 23. März 1933: in 52 Tagen zur Diktatur</span></span></summary>
+  <div class="lz"><p class="mat"><b>Material:</b> Schulbuch S. 76–77 (Q1 Foto SA-Lager, Q2 „Völkischer Beobachter“)</p>
+
+<div class="steps">
+<div class="step"><span class="dt">30.01.1933</span><b>Hitler wird Reichskanzler</b><span class="t">von Hindenburg ernannt</span></div>
+<div class="step"><span class="dt">27.02.</span><b>Reichstagsbrand</b><span class="t">Vorwand gegen die KPD</span></div>
+<div class="step hot"><span class="dt">28.02.</span><b>Reichstagsbrandverordnung</b><span class="t">Grundrechte außer Kraft</span></div>
+<div class="step"><span class="dt">05.03.</span><b>Reichstagswahl</b><span class="t">NSDAP nur 43,9 %</span></div>
+<div class="step hot"><span class="dt">23.03.</span><b>Ermächtigungsgesetz</b><span class="t">Ende der Gewaltenteilung</span></div>
+</div>
+<div>
+<h2>Ausgangslage: 30. Januar 1933</h2>
+<ul>
+<li>Reichspräsident <b>Hindenburg ernennt Hitler</b> zum Reichskanzler. Das war ein <b>legaler Vorgang</b> im Rahmen der Verfassung – keine „Machtergreifung“, wie die Nazis es später nannten.</li>
+<li>In der Regierung saßen neben Hitler nur <b>zwei weitere NSDAP-Minister</b> (Frick, Göring). Die Konservativen glaubten, Hitler „<b>zähmen</b>“ zu können – sie haben ihn <b>massiv unterschätzt</b>.</li>
+<li>Die Nazis wollten die Demokratie <b>so schnell wie möglich abschaffen</b>. Hitler ließ den Reichstag auflösen: <b>Neuwahlen am 5. März</b>. Ziel: eine <b>Zweidrittelmehrheit</b>, um die Verfassung ändern zu können.</li>
+</ul>
+</div>
+<div class="cols c2">
+<div class="card">
+<span class="when">28.02.1933</span>
+<h3>Reichstagsbrandverordnung</h3>
+<p class="small muted">offiziell: Notverordnung „zum Schutz von Volk und Staat“</p>
+<ul>
+<li><b>Anlass:</b> Am 27.02. brennt der Reichstag. Am Tatort wird der Holländer <b>Marinus van der Lubbe</b> festgenommen. Die Nazis stellen den Brand als <b>kommunistischen Umsturzversuch</b> dar und nutzen ihn für ihre Hetze <span class="q">Q2</span>.</li>
+<li><b>Inhalt:</b> Wichtige <b>Grundrechte</b> werden außer Kraft gesetzt: Meinungs-, Presse- und Versammlungsfreiheit.</li>
+<li><b>„Schutzhaft“:</b> Gegner können willkürlich verhaftet werden – <b>ohne Anklage und Prozess</b> <span class="q">Q1</span>.</li>
+<li>Viele KPD- und SPD-Politiker werden festgenommen, die kommunistische Presse wird verboten.</li>
+<li><b>Ergebnis:</b> ein <b>dauerhafter Ausnahmezustand</b>.</li>
+</ul>
+</div>
+<div class="card">
+<span class="when">23.03.1933</span>
+<h3>Ermächtigungsgesetz</h3>
+<p class="small muted">offiziell: „Gesetz zur Behebung der Not von Volk und Staat“</p>
+<ul>
+<li><b>Problem der Nazis:</b> Trotz Wahlwerbung, Gewalt und Straßenterror erreichen NSDAP (43,9 %) und DNVP (8 %) am 5. März <b>keine Zweidrittelmehrheit</b>.</li>
+<li><b>Inhalt:</b> Die <b>Regierung darf Gesetze ohne den Reichstag</b> erlassen. Damit ist die <b>Gewaltenteilung aufgehoben</b>.</li>
+<li><b>Abstimmung:</b> SA-Leute stehen drohend Spalier, um die Abgeordneten einzuschüchtern. Die Stimmen der <b>KPD</b> wurden für ungültig erklärt, viele ihrer Abgeordneten saßen in Haft.</li>
+<li><b>Nur die SPD stimmt dagegen</b> (Rede von Otto Wels, Kapitel 2). Alle anderen Parteien stimmen zu.</li>
+</ul>
+</div>
+</div>
+<div>
+<h2>Terror als Mittel der Politik</h2>
+<ul>
+<li>Einschüchterung und Gewalt waren für die Nazis <b>normale Mittel der Politik</b>. Schon vor 1933 trat die <b>SA</b> (Sturmabteilung) als uniformierte „Prügeltruppe“ der NSDAP auf.</li>
+<li>Februar bis August 1933: <b>SA- und SS-Leute als Hilfspolizisten</b>. Sie verfolgen und verhaften Andersdenkende; viele werden misshandelt und gefoltert.</li>
+<li>Weil die Gefängnisse nicht ausreichen, entstehen <b>Konzentrationslager</b>; die <b>Gestapo</b> (Geheime Staatspolizei) verfolgt politische Gegner.</li>
+</ul>
+</div>
+<div>
+<h2>1933: So ging es Schlag auf Schlag weiter</h2>
+<div class="steps">
+<div class="step"><span class="dt">20.03.</span><b>KZ Dachau</b><span class="t">wird eröffnet</span></div>
+<div class="step"><span class="dt">01.04.</span><b>Boykott</b><span class="t">jüdischer Geschäfte</span></div>
+<div class="step"><span class="dt">07.04.</span><b>Berufsbeamtengesetz</b><span class="t">Entlassungen</span></div>
+<div class="step"><span class="dt">02.05.</span><b>Gewerkschaften</b><span class="t">zerschlagen</span></div>
+<div class="step"><span class="dt">10.05.</span><b>Bücherverbrennungen</b><span class="t">in vielen Städten</span></div>
+<div class="step hot"><span class="dt">14.07.</span><b>Nur noch NSDAP</b><span class="t">einzige erlaubte Partei</span></div>
+</div>
+</div>
+<div class="box merke">
+<span class="lab">Merke</span>
+      Die Diktatur entstand <b>dem Anschein nach legal</b> (Ernennung, Notverordnung, Gesetz mit Abstimmung), tatsächlich aber durch <b>Terror, Verhaftungen und Einschüchterung</b>. Reichstagsbrandverordnung und Ermächtigungsgesetz zusammen bedeuten: <b>Ende der Demokratie, Beginn der NS-Diktatur.</b>
+</div>
+
+  </div>
+</details>
+<details class="chap t-innen" id="ch-2">
+  <summary><span class="num">2</span><span><b>Otto Wels: Rede gegen das Ermächtigungsgesetz</b><span class="s">Reichstag, 23. März 1933 · Aufgabe: Haltung erläutern und belegen</span></span></summary>
+  <div class="lz"><p class="mat"><b>Material:</b> Arbeitsblatt „Otto Wels zum Ermächtigungsgesetz“ (28 Zeilen)</p>
+
+<div class="box info">
+<span class="lab">Haltung in einem Satz</span>
+      Wels lehnt das Ermächtigungsgesetz <b>klar und mutig ab</b>: Die SPD sagt Nein, obwohl sie verfolgt wird und die Abstimmung nicht mehr gewinnen kann.
+    </div>
+<div>
+<h2>Die fünf Argumente – mit Zeilenangaben</h2>
+<div class="tw"><table>
+<tr><th>Nr.</th><th>Argument</th><th>Was Wels sagt</th><th>Beleg</th></tr>
+<tr><td class="d">1</td><td class="k">Mut trotz Gefahr</td><td>„Freiheit und Leben kann man uns nehmen, die Ehre nicht.“ Wels weiß, was das Nein kosten kann.</td><td class="ref"><span class="z">Z. 1–2</span></td></tr>
+<tr><td class="d">2</td><td class="k">Klare Ablehnung</td><td>Nach den <b>Verfolgungen</b> der SPD kann niemand erwarten, dass sie dem Gesetz zustimmt.</td><td class="ref"><span class="z">Z. 2–6</span></td></tr>
+<tr><td class="d">3</td><td class="k">Das Gesetz ist unnötig</td><td>Seit der Wahl vom 5. März haben die Regierungsparteien die Mehrheit. Sie <b>können</b> also streng nach der Verfassung regieren – und wo das möglich ist, „besteht auch die <b>Pflicht</b>“.</td><td class="ref"><span class="z">Z. 6–8</span><br/><span class="z">Z. 8–11</span></td></tr>
+<tr><td class="d">4</td><td class="k">Kontrolle wird ausgeschaltet</td><td>Kritik ist „heilsam und notwendig“. Noch nie wurde die Kontrolle durch die <b>gewählten Volksvertreter</b> so ausgeschaltet – das Gesetz macht es noch schlimmer. Die „<b>Allmacht der Regierung</b>“ wiegt umso schwerer, weil auch die <b>Presse</b> nicht mehr frei ist.</td><td class="ref"><span class="z">Z. 11–12</span><br/><span class="z">Z. 12–18</span><br/><span class="z">Z. 18–20</span></td></tr>
+<tr><td class="d">5</td><td class="k">Bekenntnis zu Werten</td><td>Die Weimarer Verfassung ist nicht sozialistisch, aber die SPD steht zu ihren Grundsätzen: <b>Rechtsstaat, Gleichberechtigung, soziales Recht</b>. Feierliches Bekenntnis zu <b>Menschlichkeit, Gerechtigkeit, Freiheit</b> und Sozialismus.</td><td class="ref"><span class="z">Z. 21–24</span><br/><span class="z">Z. 25–28</span></td></tr>
+</table></div>
+</div>
+<div class="cols c2">
+<div class="card">
+<h3>Quellenanalyse in Kurzform</h3>
+<dl class="def small">
+<dt>Quelle</dt><dd>Auszug aus einer Rede, historische Quelle (zitiert nach Michalka 1985)</dd>
+<dt>Adressat</dt><dd>Abgeordnete und Regierung Hitler, aber auch Öffentlichkeit und eigene Partei</dd>
+<dt>Stil</dt><dd>kurze Hauptsätze, die im Ohr bleiben; warnend und würdevoll</dd>
+<dt>Intention</dt><dd>das Nein der SPD öffentlich festhalten, Demokratie und Rechtsstaat verteidigen</dd>
+<dt>Kontext</dt><dd>Hitler Kanzler (30.01.), Reichstagsbrand (27.02.), Verhaftungen, Wahl (05.03.), drohende SA-Leute</dd>
+<dt>Wert</dt><dd><b>hoch</b>: letzter offener Widerspruch im Parlament gegen die Alleinherrschaft der NSDAP. <b>Grenze:</b> nur ein gekürzter Auszug; eine öffentliche Rede zielt auf Wirkung</dd>
+</dl>
+</div>
+<div class="stack">
+<div class="card soft">
+<h3>So formulierst du (Konjunktiv!)</h3>
+<ul class="small">
+<li>Wels erklärt, niemand <b>könne</b> von der SPD erwarten, dass sie zustimme. <span class="z">Z. 2–6</span></li>
+<li>Er betont, wo die Möglichkeit bestehe, nach der Verfassung zu regieren, <b>bestehe</b> auch die Pflicht dazu. <span class="z">Z. 10–11</span></li>
+<li>Er kritisiert, die Kontrolle durch die Volksvertreter <b>sei</b> ausgeschaltet worden. <span class="z">Z. 12–16</span></li>
+</ul>
+</div>
+<div class="box merke">
+<span class="lab">Merke</span>
+          Die Mehrheit stand seit dem 5. März fest – Wels konnte die Abstimmung nicht gewinnen. Seine Rede gilt als <b>letztes öffentliches Bekenntnis zur Demokratie</b> im Reichstag. Das Gesetz kam trotzdem durch.
+        </div>
+</div>
+</div>
+<div>
+<h2>Aufbau deiner Antwort <small>Aufgabe: „Erläutere die Haltung … Belege mit Textstellen“</small></h2>
+<div class="steps">
+<div class="step"><span class="dt">1 · Einleitung</span><b>Quelle vorstellen</b><span class="t">Wer, wann, wo, was?</span></div>
+<div class="step"><span class="dt">2 · These</span><b>Haltung benennen</b><span class="t">klare Ablehnung</span></div>
+<div class="step hot"><span class="dt">3 · Hauptteil</span><b>Argumente erläutern</b><span class="t">jedes mit Zeilenangabe</span></div>
+<div class="step"><span class="dt">4 · Schluss</span><b>Einordnen</b><span class="t">Kontext und Bedeutung</span></div>
+</div>
+</div>
+<div class="box urteil">
+<span class="lab">Einordnung</span>
+      Die SPD-Abgeordneten stimmten als <b>einzige Fraktion mit Nein</b> – obwohl SA-Leute sie bedrohten und die Partei bereits verfolgt wurde. Am <b>14.07.1933</b> war die NSDAP dann die einzige erlaubte Partei.
+    </div>
+
+  </div>
+</details>
+<details class="chap t-innen" id="ch-3">
+  <summary><span class="num">3</span><span><b>Das Führerprinzip</b><span class="s">Q1: Hitler, „Mein Kampf“ · Q2: Plakat · Aufgabe: beschreiben</span></span></summary>
+  <div class="lz"><p class="mat"><b>Material:</b> AB „Hitler über das Führerprinzip“, AB „Organisations­struktur der NSDAP“</p>
+
+<div class="box info">
+<span class="lab">Definition</span>
+<b>Führerprinzip:</b> Alle Macht liegt oben beim Führer. <b>Befehle gehen von oben nach unten, Gehorsam und Verantwortung von unten nach oben.</b> Führer werden eingesetzt, nicht gewählt. Mitbestimmung gibt es nicht.
+    </div>
+<div class="cols c-64">
+<div>
+<h2><span class="q">Q1</span> Text: Hitler, „Mein Kampf“</h2>
+<div class="tw"><table>
+<tr><th>Aussage</th><th>Beleg</th></tr>
+<tr><td>Grundsatz: „<b>unbedingte Führerautorität</b>“, verbunden mit höchster Verantwortung.</td><td class="ref"><span class="z">Z. 1–2</span></td></tr>
+<tr><td>Der Leiter einer Ortsgruppe wird <b>vom nächsthöheren Führer eingesetzt</b> – nicht gewählt.</td><td class="ref"><span class="z">Z. 4–5</span></td></tr>
+<tr><td><b>Umkehrung der Demokratie:</b> Die Ausschüsse unterstehen dem Führer, nicht er ihnen.</td><td class="ref"><span class="z">Z. 5–6</span></td></tr>
+<tr><td>Es gibt <b>keine Abstimmungs-</b>, nur Arbeitsausschüsse. Der Leiter teilt die Arbeit ein.</td><td class="ref"><span class="z">Z. 6–7</span></td></tr>
+<tr><td>Das gilt auf <b>jeder Ebene</b> (Bezirk, Kreis, Gau): Der Führer wird immer <b>von oben eingesetzt</b> und hat „unbeschränkte Vollmacht und Autorität“.</td><td class="ref"><span class="z">Z. 7–10</span></td></tr>
+<tr><td><b>Ausnahme:</b> Nur der Führer der Gesamtpartei wird gewählt – aber bloß, weil das Vereinsgesetz es verlangt.</td><td class="ref"><span class="z">Z. 10–11</span></td></tr>
+<tr><td>Er bestimmt allein und trägt dafür die <b>Verantwortung</b>.</td><td class="ref"><span class="z">Z. 12–13</span></td></tr>
+<tr><td>Auf dem Papier kann er <b>abgewählt</b> werden. Der Neue hat dann aber <b>gleiche Autorität</b> – das Prinzip bleibt.</td><td class="ref"><span class="z">Z. 13–17</span></td></tr>
+</table></div>
+</div>
+<div class="stack">
+<div class="card">
+<h3><span class="q">Q2</span> Plakat</h3>
+<ul class="small">
+<li><b>Beschreiben:</b> Nur Hitler ist zu sehen – in Uniform, eine Hand in die Hüfte gestützt, ernster, entschlossener Blick. Darunter groß: „Ein Volk, ein Reich, ein Führer!“</li>
+<li><b>Deuten:</b> Volk, Reich und Führer sollen als <b>Einheit</b> erscheinen. Hitler wird als der einzige Führer dargestellt, der für alle entscheidet: <b>Personenkult</b>.</li>
+<li>Text (Q1) und Bild (Q2) passen zusammen: <b>einer bestimmt, alle anderen folgen</b>.</li>
+</ul>
+</div>
+<div class="box merke">
+<span class="lab">Merke</span>
+          Das Führerprinzip ist das <b>Gegenteil von Demokratie</b>: keine Wahlen von unten, keine Abstimmungen, keine Kontrolle.
+        </div>
+<div class="card soft">
+<h3>So kannst du anfangen</h3>
+<p class="small">„Das Führerprinzip bedeutet, dass ein Einzelner bestimmt und alle anderen gehorchen. Hitler schreibt, der Leiter einer Ortsgruppe <b>werde</b> vom nächsthöheren Führer eingesetzt <span class="z">Z. 4</span> und <b>habe</b> unbeschränkte Vollmacht <span class="z">Z. 9</span>. Abstimmungen <b>gebe</b> es nicht <span class="z">Z. 6</span>.“ Danach: Plakat Q2 beschreiben und deuten.</p>
+</div>
+</div>
+</div>
+<div class="cols c2">
+<div>
+<h2>Aufbau der NSDAP</h2>
+<div class="pyr-wrap">
+<div class="arrow">Befehl von oben →</div>
+<div class="pyr">
+<div style="width:34%"><b>Der Führer</b></div>
+<div style="width:60%"><b>Stellvertreter</b> · Rudolf Heß</div>
+<div style="width:66%"><b>18 Reichsleiter</b></div>
+<div style="width:72%"><b>32 Gauleiter</b> · Gaue</div>
+<div style="width:78%"><b>Kreisleiter</b> · Kreise</div>
+<div style="width:84%"><b>Ortsgruppenleiter</b> · Ortsgruppen</div>
+<div style="width:90%"><b>Zellenleiter</b> · Zellen</div>
+<div style="width:95%"><b>Blockleiter</b> · Blocks</div>
+<div style="width:100%"><b>Mitglieder</b></div>
+</div>
+<div class="arrow up">Gehorsam nach oben →</div>
+</div>
+<ul class="small">
+<li>Die Partei war <b>straff zentralisiert</b>. Demokratische Ansätze der Frühzeit wurden schnell durch <b>Ernennung von oben</b> ersetzt.</li>
+<li><b>Gliederungen</b> (SA, SS, HJ, NS-Frauenschaft) und <b>Verbände</b> (z. B. DAF, NS-Lehrerbund) erfassten alle Lebensbereiche; 1937 gab es rund 700 000 „politische Leiter“.</li>
+</ul>
+</div>
+<div>
+<h2>NS-Weltanschauung <small>vier Kernelemente</small></h2>
+<dl class="def small" style="grid-template-columns:1fr;">
+<dd><b style="color:var(--c)">1 · Rassenlehre</b><br/>Menschen werden in „höher-“ und „minderwertige Rassen“ eingeteilt, an der Spitze die „Arier“. Wissenschaftlich ist das <b>nicht haltbar</b>.</dd>
+<dd><b style="color:var(--c)">2 · Antisemitismus</b><br/>Juden werden für fast alles verantwortlich gemacht (Weltkrieg, Niederlage, Bolschewismus). Der alte, religiöse Judenhass wird nun <b>rassistisch</b> begründet.</dd>
+<dd><b style="color:var(--c)">3 · Lebensraum im Osten</b><br/>Die angebliche Überlegenheit soll rechtfertigen, im Osten Gebiete zu <b>erobern</b> – für Siedlungsraum und Rohstoffe.</dd>
+<dd><b style="color:var(--c)">4 · Volksgemeinschaft und Führermythos</b><br/>„Du bist nichts, dein Volk ist alles.“ Alle sollen dem Staat dienen; Mitbestimmung ist verpönt, <b>Gehorsam gegenüber dem Führer</b> Pflicht. Vorbild: Mussolini.</dd>
+</dl>
+</div>
+</div>
+
+  </div>
+</details>
+<details class="chap t-innen" id="ch-4">
+  <summary><span class="num">4</span><span><b>Erziehung im Nationalsozialismus</b><span class="s">Ziel: gehorsame, körperlich harte Jungen für den Krieg und Mädchen als künftige Mütter</span></span></summary>
+  <div class="lz"><p class="mat"><b>Material:</b> AB „Erziehung im National­sozialismus“ (Q1–Q6, Kerncurriculum)</p>
+
+<div class="cols c3">
+<div class="card small"><span class="q">Q1</span> Foto: Körperertüchtigung im <b>Bund Deutscher Mädel</b> (BDM)</div>
+<div class="card small"><span class="q">Q2</span> Text: <b>Hitler 1926</b> über Erziehung („Mein Kampf“)</div>
+<div class="card small"><span class="q">Q3</span> Bericht: „… die <b>Schikane</b> hatte Methode“</div>
+<div class="card small"><span class="q">Q4</span> Foto: ein „Pimpf“ beim <b>Kleinkaliberschießen</b></div>
+<div class="card small"><span class="q">Q5</span> Bericht: „Wir lernen, was <b>feldmarschmäßig</b> ist“</div>
+<div class="card small"><span class="q">Q6</span> Spielzeug: „Der <b>Wagen des Führers</b>“ (1940)</div>
+</div>
+<div>
+<h2>Aufgabe 1: Erziehung charakterisieren</h2>
+<div class="tw"><table>
+<tr><th>Merkmal</th><th>Inhalt</th><th>Beleg</th></tr>
+<tr><td class="k">Körper vor Wissen</td><td>Die Schule soll nicht „bloßes Wissen einpumpen“, sondern <b>kerngesunde Körper</b> heranzüchten. Die wissenschaftliche Schulung kommt „<b>erst als Letztes</b>“.</td><td class="ref"><span class="q">Q2</span> <span class="z">Z. 1–4, 8</span><br/><span class="q">Q1</span></td></tr>
+<tr><td class="k">Charakter statt Bildung</td><td>An zweiter Stelle: <b>Willens- und Entschlusskraft</b>, Verantwortungsfreudigkeit.</td><td class="ref"><span class="q">Q2</span> <span class="z">Z. 4–7</span></td></tr>
+<tr><td class="k">Härte als Männerideal</td><td>Jungen sollen „<b>Schläge ertragen lernen</b>“. Ideal ist die „trotzige Verkörperung männlicher Kraft“.</td><td class="ref"><span class="q">Q2</span> <span class="z">Z. 9–13</span></td></tr>
+<tr><td class="k">Frauenbild</td><td>Frauen sollen vor allem „<b>Männer zur Welt bringen</b>“ – also Mütter sein. Auch Mädchen werden körperlich gedrillt.</td><td class="ref"><span class="q">Q2</span> <span class="z">Z. 13–14</span><br/><span class="q">Q1</span></td></tr>
+<tr><td class="k">Drill und blinder Gehorsam</td><td>Zwölfjährige Hordenführer brüllen Zehnjährige zusammen und jagen sie über Schulhöfe und Äcker. Kleinste Fehler werden mit <b>Strafexerzieren</b> bestraft. So werden „<b>Härte und blinder Gehorsam</b>“ eingedrillt.</td><td class="ref"><span class="q">Q3</span> <span class="z">Z. 1–8</span></td></tr>
+<tr><td class="k">Krieg als Spiel</td><td>Marschieren, Anschleichen, „Sturmangriff“ auf einen erfundenen Feind, Zeltlager. Schon Kinder üben das <b>Schießen</b>.</td><td class="ref"><span class="q">Q5</span> <span class="z">Z. 1–8</span><br/><span class="q">Q4</span></td></tr>
+<tr><td class="k">Freund-Feind-Denken</td><td>Das Geländespiel ist „Training im unerbittlichen <b>Freund-Feind-Gefühl</b>“.</td><td class="ref"><span class="q">Q5</span> <span class="z">Z. 11–12</span></td></tr>
+<tr><td class="k">Gemeinschaft statt Familie</td><td>Das <b>Kameradschaftsgefühl</b> gibt Sicherheit. Eine Beule wird stolz nach Hause getragen. Die Jungen haben ihre „eigene Welt“: Der Vater ist „<b>kein Kamerad</b>“, die Mutter hat „nicht viel zu sagen“.</td><td class="ref"><span class="q">Q5</span> <span class="z">Z. 10</span><br/><span class="z">Z. 13–15</span><br/><span class="z">Z. 16–18</span></td></tr>
+<tr><td class="k">Beeinflussung im Kinderzimmer</td><td>Hitlers Auto als Spielzeug: Kinder werden schon beim Spielen unbewusst beeinflusst (<b>Führerkult</b>). Es gibt kaum Freizeit ohne Politik.</td><td class="ref"><span class="q">Q6</span></td></tr>
+</table></div>
+</div>
+<div>
+<h2>Aufgabe 2: Vergleich mit dem Niedersächsischen Kerncurriculum (2008)</h2>
+<div class="vs">
+<div>
+<h3>Erziehung im NS</h3>
+<ul class="small">
+<li>Ziel: <b>gehorchen</b>, kämpfen, sich einordnen</li>
+<li>Körper und Härte wichtiger als Wissen</li>
+<li>Feindbilder und Vorbereitung auf den Krieg</li>
+<li>Der Einzelne zählt nichts, der Führer entscheidet</li>
+</ul>
+</div>
+<div>
+<h3>Erziehung heute (Kerncurriculum)</h3>
+<ul class="small">
+<li>Ziel: <b>Persönlichkeitsentwicklung</b> <span class="z">Z. 3</span></li>
+<li>Grundlage: Christentum, Humanismus, liberale, demokratische und soziale Freiheitsbewegungen <span class="z">Z. 4–5</span></li>
+<li><b>Wertebewusstsein</b> und verantwortliches Handeln im freien, demokratischen <b>Rechtsstaat</b> <span class="z">Z. 6–9</span></li>
+<li>Regeln dürfen <b>hinterfragt und verbessert</b> werden („Ordnungswandel“) <span class="z">Z. 9–12</span></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="box urteil">
+<span class="lab">Ergebnis des Vergleichs</span>
+<b>Unterschied:</b> Heute soll man <b>selbstständig denken</b> und in Freiheit Verantwortung übernehmen; im NS sollte man blind gehorchen. <b>Scheinbare Gemeinsamkeit:</b> Beide sprechen von „Charakter“ und „Verantwortung“ – im NS aber nur im Sinne des Regimes.
+    </div>
+
+  </div>
+</details>
+<details class="chap t-innen" id="ch-5">
+  <summary><span class="num">5</span><span><b>„Erfolge“ der Nationalsozialisten?</b><span class="s">Was steckt hinter der sinkenden Arbeitslosigkeit 1933–1940?</span></span></summary>
+  <div class="lz"><p class="mat"><b>Material:</b> Schulbuch S. 102–103 (D1, D2, Q2), AB „Faktoren der sinkenden Arbeits­losigkeit“</p>
+
+<div class="cols c2">
+<div>
+<h2><span class="q">D1</span> Arbeitslosigkeit <small>in Prozent</small></h2>
+<div class="bars">
+<span class="y">1933</span><div class="b"><i style="width:100%"></i><em class="in" style="left:0">25,9 %</em></div>
+<span class="y">1934</span><div class="b"><i style="width:52.1%"></i><em class="in" style="left:0">13,5 %</em></div>
+<span class="y">1935</span><div class="b"><i style="width:39.8%"></i><em class="in" style="left:0">10,3 %</em></div>
+<span class="y">1936</span><div class="b"><i style="width:28.6%"></i><em class="in" style="left:0">7,4 %</em></div>
+<span class="y">1937</span><div class="b"><i style="width:15.8%"></i><em style="left:15.8%">4,1 %</em></div>
+<span class="y">1938</span><div class="b"><i style="width:7.3%"></i><em style="left:7.3%">1,9 %</em></div>
+<span class="y">1939</span><div class="b"><i style="width:1.9%"></i><em style="left:1.9%">0,5 %</em></div>
+<span class="y">1940</span><div class="b"><i style="width:0.8%"></i><em style="left:0.8%">0,2 %</em></div>
+</div>
+<p class="small muted">Arbeitslose in % der abhängigen Erwerbspersonen. In sieben Jahren von jedem Vierten auf fast null.</p>
+</div>
+<div>
+<h2><span class="q">D2</span> Staatsausgaben <small>in Mrd. Reichsmark</small></h2>
+<div class="tw"><table>
+<tr><th>Jahr</th><th>Öffentl. Investitionen</th><th>Rüstung</th><th>Staatsschulden</th></tr>
+<tr><td class="d">1933</td><td class="r">2,43</td><td class="r">0,72</td><td class="r">11,69</td></tr>
+<tr><td class="d">1936</td><td class="r">4,22</td><td class="r">9,00</td><td class="r">14,38</td></tr>
+<tr><td class="d">1938</td><td class="r">5,53</td><td class="r"><b>15,50</b></td><td class="r"><b>19,10</b></td></tr>
+<tr><td class="d">1939</td><td class="r muted">o. A.</td><td class="r"><b>32,30</b></td><td class="r muted">o. A.</td></tr>
+</table></div>
+<p class="small"><b>Zusammenhang D1 + D2:</b> Die Arbeitslosigkeit sinkt, während die <b>Rüstungsausgaben</b> auf mehr als das 20-Fache steigen (1933 → 1938) und die <b>Schulden</b> wachsen. Der „Erfolg“ ist auf Pump und für den Krieg gekauft.</p>
+</div>
+</div>
+<div>
+<h2>Die fünf Faktoren <small>wie auf deinem Arbeitsblatt</small></h2>
+<div class="tw"><table>
+<tr><th>Nr.</th><th>Faktor</th><th>Was steckt dahinter?</th></tr>
+<tr><td class="d">1</td><td class="k">Die Wirtschaft erholt sich schon</td><td>Die Weltwirtschaftskrise ging zu Ende; Anfang 1933 war die Wirtschaft bereits auf dem Weg der Besserung. Die Nazis <b>profitierten von Maßnahmen der Weimarer Republik</b>.</td></tr>
+<tr><td class="d">2</td><td class="k">Autobahnbau und Großprojekte</td><td>Die Autobahnen waren <b>nicht Hitlers Erfindung</b>: Einige gab es schon, andere waren lange geplant. Großer <b>Propagandaerfolg</b>, aber <b>nur wenige Arbeitsplätze</b>. Dazu <b>immens teure</b> Großprojekte (Reichsparteitagsgelände Nürnberg, Umbau von Berlin und München).</td></tr>
+<tr><td class="d">3</td><td class="k">Reichsarbeitsdienst (RAD) und Frauen aus dem Beruf</td><td>RAD ab 1935: halbjähriger <b>Pflichtdienst</b> für Männer von 18 bis 25 (Bau, Landwirtschaft), schlecht bezahlt. Frauen sollten sich aus dem Berufsleben zurückziehen. Beide Gruppen <b>zählten nicht mehr als arbeitslos</b>.</td></tr>
+<tr><td class="d">4</td><td class="k">Allgemeine Wehrpflicht 1935</td><td>Alle eingezogenen jungen Männer galten <b>nicht mehr als arbeitslos</b>.</td></tr>
+<tr><td class="d">5</td><td class="k">Aufrüstung und Vierjahresplan 1936</td><td>Viele neue Arbeitsplätze in der <b>Rüstungsindustrie</b>. Die Aufrüstung begann schon 1933. Wichtigstes Ziel der Wirtschaftspolitik war die <b>Vorbereitung des Krieges</b>.</td></tr>
+</table></div>
+</div>
+<div class="cols c2">
+<div class="card">
+<h3><span class="q">Q2</span> Vierjahresplan (Hitler, geheime Denkschrift, August 1936)</h3>
+<ul class="small">
+<li>Deutschland soll bei <b>Benzin, Gummi und Eisenerz</b> vom Ausland unabhängig werden <span class="z">Z. 1–5</span> = <b>Autarkie</b>.</li>
+<li>Hitlers Beispiele: Benzin von 0,7–0,8 auf 3 Mio. t, Gummi auf 70 000–80 000 t, Eisenerz auf 20–25 Mio. t <span class="z">Z. 5–13</span>.</li>
+<li>Warum gerade diese drei? Ohne Treibstoff, Reifen und Stahl kann man <b>keinen Krieg führen</b> – und im Krieg wäre der Import blockiert.</li>
+<li>„Die deutsche <b>Armee</b> muss in 4 Jahren <b>einsatzfähig</b> sein.“ <span class="z">Z. 18–19</span></li>
+<li>„Die deutsche <b>Wirtschaft</b> muss in 4 Jahren <b>kriegsfähig</b> sein.“ <span class="z">Z. 20–21</span></li>
+</ul>
+</div>
+<div class="stack">
+<div class="box achtung">
+<span class="lab">Geschönte Statistik, hoher Preis</span>
+<ul class="small tight">
+<li>Wehrpflicht, RAD und verdrängte Frauen lassen die Zahlen <b>besser aussehen</b>, als die Lage war.</li>
+<li>Nach wenigen Jahren war Deutschland <b>hoch verschuldet</b> und stand <b>kurz vor dem Bankrott</b>.</li>
+<li>Ausweg der Nazis: ein fest eingeplanter <b>Krieg zur Eroberung und Ausbeutung</b> anderer Länder.</li>
+</ul>
+</div>
+<div class="box urteil">
+<span class="lab">Antwort auf: „Hitler hat dafür gesorgt, dass es den Leuten besser geht“</span>
+<span class="small">Die Erholung begann <b>vor</b> Hitler, die Statistik war <b>geschönt</b>, und bezahlt wurde mit <b>Schulden, Aufrüstung und Krieg</b>.</span>
+</div>
+</div>
+</div>
+<div class="src"><span><span class="q">Q1</span></span><span><b>Foto „Spatenappell“, 1935:</b> RAD-Männer in Uniform präsentieren den Spaten wie ein Gewehr. <b>Gewünschte Wirkung:</b> Ordnung, Stärke, alle haben Arbeit. <b>Wirklichkeit:</b> schlecht bezahlte Pflichtarbeit von Hand, die wenig bewirkte; der RAD schönte die Statistik und diente der Erziehung im Sinne des NS-Staats.</span></div>
+
+  </div>
+</details>
+<details class="chap t-innen" id="ch-6">
+  <summary><span class="num">6</span><span><b>Die Nürnberger Gesetze</b><span class="s">15. September 1935, Reichsparteitag der NSDAP in Nürnberg: Entrechtung der Juden per Gesetz</span></span></summary>
+  <div class="lz"><p class="mat"><b>Material:</b> AB „Nürnberger Gesetze – Entrechtung der Juden“ (M1, M2)</p>
+
+<div class="cols c2">
+<div class="card">
+<span class="when">15.09.1935</span>
+<h3>Reichsbürgergesetz</h3>
+<ul>
+<li><b>§ 2 Abs. 1:</b> Reichsbürger ist nur, wer „deutschen oder artverwandten Blutes“ ist und zeigt, dass er dem deutschen Volk und Reich <b>treu dienen</b> will.</li>
+<li><b>§ 2 Abs. 3:</b> Nur Reichsbürger haben die <b>vollen politischen Rechte</b>.</li>
+</ul>
+<p><b>Folge:</b> Juden sind nur noch „Staatsangehörige“ – <b>Bürger zweiter Klasse</b> ohne politische Rechte.</p>
+</div>
+<div class="card">
+<span class="when">15.09.1935</span>
+<h3>„Blutschutzgesetz“</h3>
+<p class="small muted">Gesetz zum Schutze des deutschen Blutes und der deutschen Ehre</p>
+<ul>
+<li><b>§ 1:</b> <b>Ehen</b> zwischen Juden und Nichtjuden sind verboten. Trotzdem geschlossene Ehen sind nichtig – auch wenn sie im Ausland geschlossen wurden.</li>
+<li><b>§ 2:</b> Auch <b>außerehelicher Verkehr</b> ist verboten.</li>
+<li><b>§ 3:</b> Juden dürfen keine nichtjüdischen <b>Frauen unter 45</b> im Haushalt beschäftigen.</li>
+</ul>
+</div>
+</div>
+<div class="cols c2">
+<div class="card soft">
+<span class="when">14.11.1935</span>
+<h3>1. Verordnung zum Reichsbürgergesetz</h3>
+<ul>
+<li>Legt fest, <b>wer als „Jude“ gilt</b> – nach der Abstammung von den Großeltern: Wer drei oder vier jüdische Großeltern hat, gilt als Jude.</li>
+<li><b>§ 2 Abs. 2:</b> „Jüdischer Mischling“ ist, wer <b>ein oder zwei</b> jüdische Großeltern hat.</li>
+<li>Ob ein Großelternteil als „volljüdisch“ galt, entschied seine <b>Religion</b>. Die angebliche „Rasse“ ließ sich also gar nicht feststellen – die Rassenlehre ist <b>wissenschaftlicher Unsinn</b>.</li>
+<li>Juden dürfen <b>nicht mehr wählen</b> und <b>kein öffentliches Amt</b> ausüben; jüdische Beamte werden entlassen.</li>
+</ul>
+</div>
+<div class="stack">
+<div class="box achtung">
+<span class="lab">Achtung: Druckfehler im Arbeitsblatt</span>
+          Auf dem Arbeitsblatt steht bei der Verordnung „14. November <b>1938</b>“. Richtig ist <b>14.11.1935</b> – sie wurde zwei Monate nach den Gesetzen erlassen.
+        </div>
+<div class="card">
+<h3>Aufgabe 2: Was soll § 3 verhindern?</h3>
+<p class="small">Der Paragraf unterstellt, jüdische Männer seien eine Gefahr für nichtjüdische Frauen im Haushalt. Er soll <b>jeden engen Kontakt</b> verhindern, aus dem Beziehungen oder Kinder entstehen könnten (in der NS-Sprache: „Rassenschande“). Darum die Altersgrenze von 45 Jahren. Folge: Viele Hausangestellte verloren ihre Arbeit, Juden wurden als Bedrohung dargestellt.</p>
+</div>
+</div>
+</div>
+<div>
+<h2><span class="q">M2</span> Die Gesetze im Alltag <small>Erinnerungen von Ingeborg Hecht, geb. 1921, jüdischer Vater, nichtjüdische Mutter</small></h2>
+<div class="tw"><table>
+<tr><th>Datum</th><th>Bestimmung</th><th>Was das für die Familie bedeutete</th></tr>
+<tr><td class="d">18.09.1935</td><td>Wer in Fälle von „Rassenschande“ verwickelt ist, kommt in <b>Schutzhaft</b>.</td><td>Die Mutter wird wegen angeblicher „Rassenschande“ mit ihrem <b>geschiedenen Mann</b> verhaftet, der Vater ebenfalls.</td></tr>
+<tr><td class="d">12.11.1938</td><td>Juden ist der Besuch von <b>Theatern, Kinos, Konzerten</b> und Ausstellungen verboten.</td><td>Vater und Tochter wagen sich trotzdem einmal ins Kino – in ständiger <b>Angst</b>, entdeckt zu werden.</td></tr>
+<tr><td class="d">Kontaktverbot</td><td>Juden und „Arier“ sollen keinen Kontakt haben.</td><td>Als Mutter und Tochter dem Vater zufällig auf der Straße begegnen, gehen alle <b>wortlos weiter</b> – aus Angst vor Bespitzelung.</td></tr>
+</table></div>
+<p><b>Auswirkungen auf den Alltag (Aufgabe 3):</b> ständige <b>Angst</b> vor Verhaftung und Bespitzelung · <b>Ausschluss</b> aus dem öffentlichen Leben · Familien werden <b>getrennt</b>.</p>
+</div>
+<div class="cols c2">
+<div class="box urteil">
+<span class="lab">Bewertung (Aufgabe 1)</span>
+        Die Gesetze griffen tief ins <b>Privatleben</b> ein: Der Staat bestimmte, wen man lieben und heiraten durfte. Juden verloren ihre Rechte, wurden ausgegrenzt, Familien wurden auseinandergerissen. Die Gesetze waren <b>ungerecht und rassistisch</b>.
+      </div>
+<div class="box merke">
+<span class="lab">Merke</span>
+        Die Nürnberger Gesetze machten <b>Diskriminierung zu geltendem Recht</b>: Unrecht sollte legal aussehen. Die Ausgrenzung ging weiter: <b>Novemberpogrome am 09./10.11.1938</b>, kurz darauf weitere Verbote (12.11.1938).
+      </div>
+</div>
+
+  </div>
+</details>
+<details class="chap t-aussen" id="ch-7">
+  <summary><span class="num">7</span><span><b>Deutsche Außenpolitik 1933–1938</b><span class="s">Schritt für Schritt wird der Versailler Vertrag gebrochen – und niemand hält Hitler auf</span></span></summary>
+  <div class="lz"><p class="mat"><b>Material:</b> AB „Deutsche Außenpolitik 1933–1938“ (Text + Tabelle zum Ausfüllen)</p>
+
+<div class="steps">
+<div class="step"><span class="dt">1933/34</span><b>Sich lösen</b><span class="t">Austritt aus dem Völkerbund</span></div>
+<div class="step"><span class="dt">1935/36</span><b>Versailles brechen</b><span class="t">Wehrpflicht, Rheinland</span></div>
+<div class="step"><span class="dt">1936/37</span><b>Verbündete suchen</b><span class="t">Italien, Japan</span></div>
+<div class="step hot"><span class="dt">ab 1938</span><b>Expandieren</b><span class="t">Österreich, Sudetenland</span></div>
+</div>
+<div>
+<h2>Die ausgefüllte Tabelle</h2>
+<div class="tw"><table>
+<tr><th>Datum</th><th>Ereignis</th><th>Was passiert? Warum ist es wichtig?</th></tr>
+<tr><td class="d">14.10.1933</td><td class="k">Austritt aus dem Völkerbund</td><td>Begründung: Frankreich verweigere Deutschland die militärische Gleichberechtigung. Volksabstimmung: 93 % Ja. Deutschland zieht sich aus der internationalen Gemeinschaft zurück; 1934 steigen die <b>Militärausgaben</b> stark.</td></tr>
+<tr><td class="d">26.01.1934</td><td class="k">Nichtangriffspakt mit Polen</td><td>Wirkt wie ein Zeichen des Friedens. Am 01.09.1939 überfällt Deutschland Polen trotzdem.</td></tr>
+<tr><td class="d">13.01.1935</td><td class="k">Saarabstimmung</td><td>Im Versailler Vertrag vorgesehen, also <b>rechtmäßig</b>: 90,7 % (rund 91 %) stimmen für die „Heimkehr“ ins Reich. Die Nazis feiern das als Sieg über die Ordnung von 1918.</td></tr>
+<tr><td class="d">16.03.1935</td><td class="k">Allgemeine Wehrpflicht</td><td><b>Erster offener Bruch des Versailler Vertrags.</b> Statt 100 000 Mann soll die Wehrmacht 550 000 Mann stark sein. Frankreich, Großbritannien und Italien protestieren nur (Konferenz von Stresa).</td></tr>
+<tr><td class="d">18.06.1935</td><td class="k">Deutsch-britisches Flottenabkommen</td><td>Die deutsche Kriegsflotte darf bis zu <b>35 %</b> der britischen erreichen. Großbritannien akzeptiert damit die Aufrüstung – die Versailler Ordnung löst sich auf.</td></tr>
+<tr><td class="d">07.03.1936</td><td class="k">Einmarsch ins Rheinland</td><td>Rund 30 000 Soldaten besetzen das <b>entmilitarisierte Rheinland</b> (Bruch der Verträge von Versailles und Locarno). Frankreich und Großbritannien sind schockiert, wollen aber <b>keinen Krieg riskieren</b>.</td></tr>
+<tr><td class="d">25.10.1936</td><td class="k">Freundschaftsvertrag mit Italien</td><td>„Achse Berlin–Rom“. Hintergrund: gemeinsame Hilfe für General Franco im <b>Spanischen Bürgerkrieg</b> (1937 Bombardierung von Guernica). Im selben Jahr: Antikominternpakt mit Japan.</td></tr>
+<tr><td class="d">13.03.1938</td><td class="k">„Anschluss“ Österreichs</td><td>Hitler droht mit Einmarsch; am 12.03. marschieren deutsche Truppen ein, am 13.03. wird Österreich Teil des Reichs („Ostmark“). Volksabstimmung zur Bestätigung am 10.04. Das Ausland verurteilt das Vorgehen, <b>erkennt das Ergebnis aber an</b>.</td></tr>
+</table></div>
+</div>
+<div class="cols c2">
+<div class="card">
+<h3>Von der Revision zur Expansion</h3>
+<ul class="small">
+<li><b>Revision</b> (bis 1936): Die Bestimmungen des Versailler Vertrags werden nach und nach „abgeschüttelt“.</li>
+<li><b>Expansion</b> (ab 1938): Deutschland soll größer werden. Die gewaltige Aufrüstung war wirtschaftlich nur noch durch <b>Eroberungen</b> zu bezahlen.</li>
+<li><b>November 1937:</b> In einer <b>Geheimrede</b> vor den Generälen kündigt Hitler eine „kriegerische Lösung“ der „deutschen Raumfrage“ an. Erste Ziele: <b>Österreich</b> und die <b>Tschechoslowakei</b>.</li>
+</ul>
+</div>
+<div class="card soft">
+<h3>Warum ließ man Hitler gewähren?</h3>
+<ul class="small">
+<li>Frankreich und Großbritannien wollten <b>keinen Krieg riskieren</b>.</li>
+<li>Großbritannien kam Hitler mit dem <b>Flottenabkommen</b> sogar entgegen.</li>
+<li>Hitler hielt die demokratischen Westmächte für <b>schwach</b> – und fühlte sich durch jedes Nachgeben bestätigt.</li>
+<li>Dabei wäre Deutschland 1936 auf einen Gegenschlag <b>noch gar nicht vorbereitet</b> gewesen.</li>
+</ul>
+</div>
+</div>
+<div class="box merke">
+<span class="lab">Merke</span>
+      Hitlers Methode: <b>vollendete Tatsachen schaffen</b>, danach Friedenswillen beteuern. Jeder Erfolg ohne Gegenwehr machte den nächsten Schritt größer – von der Wehrpflicht über das Rheinland und Österreich bis zur Tschechoslowakei (Kapitel 8).
+    </div>
+
+  </div>
+</details>
+<details class="chap t-aussen" id="ch-8">
+  <summary><span class="num">8</span><span><b>Sudetenkrise und Münchener Konferenz 1938</b><span class="s">Appeasement-Politik · Aufgaben: englisches Vorgehen beurteilen, Rolle der tschechoslowakischen Regierung</span></span></summary>
+  <div class="lz"><p class="mat"><b>Material:</b> AB „Die Sudetenkrise 1938“ (VF, Q1–Q3), AB „Die Münchener Konferenz“ (M1, M2, Q1, Q2)</p>
+
+<div class="steps">
+<div class="step"><span class="dt">Mai 1938</span><b>Zuspitzung</b><span class="t">CSR: Teilmobilmachung</span></div>
+<div class="step"><span class="dt">15.09.</span><b>Hitler droht</b><span class="t">Q1: notfalls Weltkrieg</span></div>
+<div class="step"><span class="dt">21.09.</span><b>CSR gibt nach</b><span class="t">Q2: „mit Bitternis“</span></div>
+<div class="step"><span class="dt">26.09.</span><b>Chamberlain</b><span class="t">Q3: verhandelt weiter</span></div>
+<div class="step hot"><span class="dt">29./30.09.</span><b>Münchener Abkommen</b><span class="t">Sudetenland an Deutschland</span></div>
+<div class="step"><span class="dt">15.03.1939</span><b>Bruch</b><span class="t">Einmarsch in Prag</span></div>
+</div>
+<div class="cols c2">
+<div>
+<h2>Vorgeschichte <small>Verfassertext (VF)</small></h2>
+<ul>
+<li>Die <b>Tschechoslowakei (CSR)</b> entstand 1918. Dort lebten Tschechen, Slowaken und rund <b>3 Mio. Sudetendeutsche</b>; das Zusammenleben war schwierig.</li>
+<li>Die <b>Sudetendeutsche Partei</b> (1935 gegründet, <b>von Berlin finanziert</b>) fordert Autonomie. In Absprache mit Hitler will sie die CSR schwächen.</li>
+<li><b>Mai 1938:</b> Überzogene Forderungen und Drohungen aus Berlin. Die Prager Regierung ordnet eine <b>Teilmobilmachung</b> an; Frankreich und die Sowjetunion sichern Hilfe zu.</li>
+</ul>
+</div>
+<div>
+<h2>Die drei Quellen</h2>
+<div class="tw"><table class="small">
+<tr><td class="ref"><span class="q">Q1</span></td><td><b>Hitler zu Chamberlain, 15.09.:</b> Er werde die 3 Mio. Deutschen „ins Reich“ holen und dafür sogar einen <b>Weltkrieg</b> in Kauf nehmen. Es sei das „letzte größere Problem“.</td></tr>
+<tr><td class="ref"><span class="q">Q2</span></td><td><b>Note der CSR, 21.09.:</b> Auf „äußerstes Drängen“ Frankreichs und Englands nimmt sie die Vorschläge „<b>mit Bitternis</b>“ an. Sie wurde vorher <b>nicht einmal befragt</b>.</td></tr>
+<tr><td class="ref"><span class="q">Q3</span></td><td><b>Chamberlain, 26.09.:</b> Er will weiter verhandeln. Die Völker Europas dürften nicht wegen einer fast schon gelösten Frage in einen Krieg gestürzt werden.</td></tr>
+</table></div>
+</div>
+</div>
+<div class="cols c-64">
+<div class="card">
+<span class="when">29./30.09.1938</span>
+<h3>Münchener Abkommen</h3>
+<p class="small"><b>Teilnehmer:</b> Chamberlain (Großbritannien), Daladier (Frankreich), Hitler, Mussolini (Italien) – <b>ohne die CSR!</b></p>
+<ol class="small">
+<li>Die CSR muss die sudetendeutschen Gebiete <b>räumen</b>; deutsche Truppen besetzen sie.</li>
+<li>Ein internationaler Ausschuss soll die endgültigen <b>Grenzen</b> festlegen.</li>
+<li>England und Frankreich erklären ihre <b>Absicht</b>, die neuen Grenzen der CSR zu <b>garantieren</b>.</li>
+</ol>
+<p class="small">Am 30.09. erklären Hitler und Chamberlain gemeinsam, künftige Fragen durch <b>Konsultation</b> (Beratung) zu lösen <span class="q">Q2</span>. Chamberlain verkündet zu Hause „<b>Peace for our time</b>“ – Frieden für unsere Zeit.</p>
+</div>
+<div class="card soft">
+<h3>Begriffe</h3>
+<dl class="def small" style="grid-template-columns:1fr;">
+<dd><b style="color:var(--c)">Appeasement</b> (engl. Beschwichtigung): Politik der britischen Regierung 1933–1939, Hitler durch <b>Zugeständnisse</b> vom Krieg abzuhalten. München gilt als ihr <b>Höhepunkt</b>.</dd>
+<dd><b style="color:var(--c)">Autonomie:</b> Selbstständigkeit, Selbstverwaltung.</dd>
+<dd><b style="color:var(--c)">Konflikt:</b> Unterschiedliche Interessen von Personen, Gruppen oder Staaten treffen aufeinander, sodass sich mindestens eine Seite beeinträchtigt sieht.</dd>
+</dl>
+</div>
+</div>
+<div>
+<h2>Aufgabe 1: Englisches Vorgehen beurteilen</h2>
+<div class="vs">
+<div>
+<h3>Das spricht für Chamberlain</h3>
+<ul class="small">
+<li>Er wollte unbedingt einen <b>neuen Weltkrieg verhindern</b> <span class="q">Q3</span> – nur 20 Jahre nach dem letzten.</li>
+<li>Er verhandelte persönlich und reiste dreimal nach Deutschland <span class="q">Q1</span>.</li>
+<li>Er glaubte Hitlers Zusage, es sei die letzte Forderung.</li>
+</ul>
+</div>
+<div>
+<h3>Das spricht gegen sein Vorgehen</h3>
+<ul class="small">
+<li>Er gab einer <b>Erpressung</b> nach: Hitler drohte offen mit Krieg <span class="q">Q1</span>.</li>
+<li>Ein <b>Verbündeter wurde geopfert</b> und unter Druck gesetzt, ohne gefragt zu werden <span class="q">Q2</span>.</li>
+<li>Hitler hatte schon Österreich angeschlossen (VF) – er wurde <b>gestärkt</b>, nicht gestoppt.</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="cols c2">
+<div class="box urteil">
+<span class="lab">Urteil</span>
+<b>Verständlich, aber naiv.</b> Das Nachgeben sicherte keinen Frieden: Im März 1939 besetzte Hitler die „Rest-Tschechei“ und brach damit sein Versprechen. Die Appeasement-Politik war gescheitert.
+      </div>
+<div class="box info">
+<span class="lab">Aufgabe 2: Rolle der CSR</span>
+        Sie wehrt sich zuerst (Teilmobilmachung, VF) und verlässt sich auf ihre Verbündeten, wird dann aber <b>nicht gefragt</b>, <b>unter Druck gesetzt</b> und <b>im Stich gelassen</b> <span class="q">Q2</span>: <b>Opfer</b>, nicht Mitspieler.
+      </div>
+</div>
+
+  </div>
+</details>
+<details class="chap t-aussen" id="ch-9">
+  <summary><span class="num">9</span><span><b>Der Hitler-Stalin-Pakt</b><span class="s">Deutsch-sowjetischer Nichtangriffspakt, Moskau, 23. August 1939 – neun Tage vor Kriegsbeginn</span></span></summary>
+  <div class="lz"><p class="mat"><b>Material:</b> AB „75 Jahre deutsch-sowjetischer Nicht­angriffsvertrag“ (M1, M2)</p>
+
+<div class="cols c2">
+<div class="card">
+<span class="when">öffentlich</span>
+<h3>Der Nichtangriffspakt</h3>
+<p class="small">Unterzeichnet von den Außenministern <b>Ribbentrop</b> (Deutschland) und <b>Molotow</b> (Sowjetunion). Laufzeit: <b>10 Jahre</b>.</p>
+<div class="tw"><table class="small">
+<tr><td class="k">Art. 1</td><td><b>Kein Angriff</b> und keine Gewalt gegeneinander.</td><td class="ref"><span class="z">Z. 4–9</span></td></tr>
+<tr><td class="k">Art. 2</td><td>Wird einer von einem Dritten angegriffen, <b>hilft der andere diesem Dritten nicht</b>.</td><td class="ref"><span class="z">Z. 10–14</span></td></tr>
+<tr><td class="k">Art. 5</td><td>Streit wird nur <b>friedlich</b> durch Gespräche gelöst.</td><td class="ref"><span class="z">Z. 16–22</span></td></tr>
+</table></div>
+<p class="small">Nach außen sieht das wie ein <b>Friedensvertrag</b> aus. Das Entscheidende steht im geheimen Zusatz.</p>
+</div>
+<div class="card soft">
+<span class="when">streng geheim</span>
+<h3>Das geheime Zusatzprotokoll</h3>
+<p class="small">Osteuropa wird in <b>Interessensphären</b> aufgeteilt – über die Köpfe der betroffenen Länder hinweg.</p>
+<div class="tw"><table class="small">
+<tr><td class="k">1.</td><td><b>Finnland, Estland, Lettland</b> → sowjetische Sphäre. Die Grenze ist die <b>Nordgrenze Litauens</b>; Litauen selbst fällt an die deutsche Sphäre.</td><td class="ref"><span class="z">Z. 31–37</span></td></tr>
+<tr><td class="k">2.</td><td><b>Polen</b> wird geteilt, ungefähr entlang der Flüsse <b>Pissa, Narew, Weichsel, San</b>.</td><td class="ref"><span class="z">Z. 38–49</span></td></tr>
+<tr><td class="k">3.</td><td><b>Bessarabien</b> → sowjetisches Interesse; Deutschland erklärt sich „desinteressiert“.</td><td class="ref"><span class="z">Z. 50–53</span></td></tr>
+<tr><td class="k">4.</td><td>Das Protokoll bleibt <b>streng geheim</b>.</td><td class="ref"><span class="z">Z. 54–55</span></td></tr>
+</table></div>
+</div>
+</div>
+<div>
+<h2>Wer bekommt was? <small>Aufgabe 2</small></h2>
+<div class="tw"><table>
+<tr><th></th><th>Deutsche Sphäre</th><th>Sowjetische Sphäre</th></tr>
+<tr><td class="d">23.08.1939</td><td>Westpolen bis zur Flusslinie, <b>Litauen</b></td><td>Ostpolen, Finnland, Estland, Lettland, Bessarabien</td></tr>
+<tr><td class="d">Änderung 28.09.1939</td><td>erhält zusätzlich <b>mittelpolnische Gebiete bis zum Bug</b></td><td>erhält dafür <b>Litauen</b></td></tr>
+<tr><td class="d">Wie betroffen?</td><td colspan="2"><b>Militärisch</b> (Einmarsch, Besetzung): Polen, Litauen. <b>Politisch</b> (einer Sphäre zugeteilt): Finnland, Estland, Lettland, Bessarabien, Wilnaer Gebiet.</td></tr>
+</table></div>
+</div>
+<div>
+<h2>Auswirkungen <small>Aufgabe 3</small></h2>
+<div class="steps">
+<div class="step hot"><span class="dt">01.09.1939</span><b>Überfall auf Polen</b><span class="t">Zweiter Weltkrieg beginnt</span></div>
+<div class="step"><span class="dt">28.09.1939</span><b>Grenz- und Freundschaftsvertrag</b><span class="t">Polen ist aufgeteilt</span></div>
+<div class="step"><span class="dt">18.12.1940</span><b>Weisung Nr. 21</b><span class="t">Plan „Barbarossa“</span></div>
+<div class="step hot"><span class="dt">22.06.1941</span><b>Überfall auf die Sowjetunion</b><span class="t">Pakt gebrochen</span></div>
+</div>
+<ul>
+<li><b>Weg frei für den Krieg:</b> Hitler kann Polen angreifen, ohne einen Zweifrontenkrieg fürchten zu müssen. Weil England Polen eine <b>Garantie</b> gegeben hatte, folgte daraus der Zweite Weltkrieg.</li>
+<li><b>Machtverschiebung:</b> Der Plan von England und Frankreich, die Sowjetunion für eine „<b>Große Allianz</b>“ gegen Hitler zu gewinnen, ist gescheitert.</li>
+<li><b>Folgen für die Menschen:</b> Polen und das Baltikum leiden unter sowjetischer und später deutscher Besatzung – mit Vertreibungen und Massakern an der einheimischen und jüdischen Bevölkerung, <b>Hunderttausende Tote</b>.</li>
+</ul>
+</div>
+<div class="cols c2">
+<div class="box urteil">
+<span class="lab">Beurteilung (Aufgabe 4)</span>
+        Der Pakt <b>widersprach</b> Hitlers antibolschewistischer Haltung – er war rein <b>taktisch</b>. Hitler sah Verträge als nicht bindend an: Schon mit der Weisung Nr. 21 plante er den Angriff, obwohl der Pakt 10 Jahre gelten sollte. Sein Ziel blieb ein <b>Vernichtungskrieg</b> gegen die Sowjetunion.
+      </div>
+<div class="box merke">
+<span class="lab">Merke</span>
+        Für Hitler war der Pakt nur <b>Mittel zum Zweck</b>: erst Polen, dann der Krieg im Osten. Zwei Diktatoren teilten Osteuropa unter sich auf – mit schlimmen Folgen für die Menschen dort.
+      </div>
+</div>
+
+  </div>
+</details>
+<details class="chap t-meth" id="ch-check">
+  <summary><span class="num"><svg height="62%" style="vertical-align:middle" viewbox="0 0 24 24" width="62%"><path d="M4.5 12.8l4.8 4.8L19.5 6.8" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="3.4"></path></svg></span><span><b>Stolperfallen, Selbsttest und Begriffe</b><span class="s">Zum Schluss: typische Fehler vermeiden und prüfen, ob alles sitzt</span></span></summary>
+  <div class="lz">
+
+<div>
+<h2>Sechs Stolperfallen</h2>
+<div class="cols c2">
+<div class="box achtung"><span class="lab">1 · Datum Reichstagsbrand</span>Der Brand war am <b>27. Februar 1933</b>. Der 1. März ist nur das Datum der Zeitung „Völkischer Beobachter“ (Q2).</div>
+<div class="box achtung"><span class="lab">2 · „Machtergreifung“</span>Das ist ein Propagandabegriff. Hitler wurde <b>ernannt</b> – besser: Machtübertragung oder Machtübernahme.</div>
+<div class="box achtung"><span class="lab">3 · Verordnung 1935, nicht 1938</span>Die 1. Verordnung zum Reichsbürgergesetz ist vom <b>14.11.1935</b>. Die Jahreszahl 1938 auf dem Arbeitsblatt ist ein Druckfehler.</div>
+<div class="box achtung"><span class="lab">4 · 23.03. ist nicht 14.07.</span><b>Ermächtigungsgesetz</b> (23.03.1933) = Gesetze ohne Reichstag. <b>Einzige erlaubte Partei</b> wird die NSDAP erst am 14.07.1933.</div>
+<div class="box achtung"><span class="lab">5 · Genau zitieren</span>In der Note der CSR heißt es „mit <b>Bitternis</b>“ (nicht „Bitterkeit“). Zitate immer Wort für Wort abschreiben.</div>
+<div class="box achtung"><span class="lab">6 · Litauen</span>Am 23.08.1939 gehört Litauen zur <b>deutschen</b> Sphäre, erst seit dem 28.09.1939 zur <b>sowjetischen</b>.</div>
+</div>
+</div>
+<div>
+<h2>Kann ich das? <small>Abhaken, wenn du es ohne Blatt erklären kannst</small></h2>
+<div class="cols c2">
+<ul class="check">
+<li>Warum war der 30.01.1933 keine „Machtergreifung“?</li>
+<li>Was regelten Reichstagsbrandverordnung und Ermächtigungsgesetz?</li>
+<li>Drei Argumente von Otto Wels – mit Zeilenangabe.</li>
+<li>Das Führerprinzip in zwei Sätzen erklären.</li>
+<li>Je ein Beispiel für NS-Erziehung aus Q2, Q3 und Q5.</li>
+<li>Unterschied zur Erziehung heute (Kerncurriculum).</li>
+</ul>
+<ul class="check">
+<li>Fünf Faktoren der sinkenden Arbeitslosigkeit – welche schönten nur die Statistik?</li>
+<li>Inhalt der beiden Nürnberger Gesetze und ihre Folgen im Alltag.</li>
+<li>Alle Daten des Zeitstrahls mit Tag, Monat und Jahr.</li>
+<li>Vier Schritte der Außenpolitik 1933–1938 mit Datum.</li>
+<li>Appeasement erklären und Chamberlains Vorgehen beurteilen.</li>
+<li>Inhalt und Folgen des Hitler-Stalin-Pakts.</li>
+</ul>
+</div>
+</div>
+<div>
+<h2>Begriffe von A bis Z</h2>
+<div class="cols c2">
+<dl class="def small">
+<dt>Antisemitismus</dt><dd>Judenfeindschaft; im NS rassistisch begründet</dd>
+<dt>Appeasement</dt><dd>Beschwichtigungspolitik: Zugeständnisse, um Krieg zu vermeiden</dd>
+<dt>Autarkie</dt><dd>wirtschaftliche Unabhängigkeit vom Ausland</dd>
+<dt>Autonomie</dt><dd>Selbstständigkeit, Selbstverwaltung</dd>
+<dt>Ermächtigungsgesetz</dt><dd>Regierung darf Gesetze ohne Parlament erlassen</dd>
+<dt>Expansion</dt><dd>Ausdehnung des eigenen Staatsgebiets</dd>
+<dt>Führerprinzip</dt><dd>Befehl von oben, Gehorsam von unten, keine Wahlen</dd>
+<dt>Gewaltenteilung</dt><dd>Parlament, Regierung, Gerichte kontrollieren sich</dd>
+</dl>
+<dl class="def small">
+<dt>Interessensphäre</dt><dd>Gebiet, in dem eine Großmacht bestimmen will</dd>
+<dt>Notverordnung</dt><dd>Verordnung des Reichspräsidenten ohne Parlament</dd>
+<dt>Propaganda</dt><dd>gezielte Beeinflussung der Meinung</dd>
+<dt>Revision</dt><dd>Rückgängigmachen (hier: des Versailler Vertrags)</dd>
+<dt>„Schutzhaft“</dt><dd>Haft ohne Anklage und Prozess</dd>
+<dt>Vernichtungskrieg</dt><dd>Krieg mit dem Ziel, Gegner und Bevölkerung auszulöschen</dd>
+<dt>Volksgemeinschaft</dt><dd>NS-Ideal: Alle dienen dem Volk, der Einzelne zählt nichts; wer nicht dazugehören soll, wird ausgegrenzt</dd>
+</dl>
+</div>
+</div>
+<div class="box info">
+<span class="lab">Tipp für die Arbeit</span>
+      Erst das <b>Aufgabenwort</b> unterstreichen, dann die <b>Quelle einordnen</b>, dann antworten – und jede Aussage zum Text mit einer <b>Zeilenangabe</b> belegen.
+    </div>
+
+  </div>
+</details>
+
+</div>
+<footer class="site">Inhalte aus dem Zeitstrahl, den Arbeitsblättern und den Schulbuchseiten der Mappe.</footer>
+<script src="assets/data.js"></script>
+<script>
+document.querySelector('[data-tab="lernzettel"]').setAttribute("aria-current","page");
+const tl = document.getElementById("timeline");
+let topic = "all", mappe = true;
+function render() {
+  const list = EVENTS.filter(e => (topic === "all" || e.t === topic) && (mappe || e.tier === 1));
+  const years = [...new Set(list.map(e => e.y))];
+  tl.innerHTML = years.map(y => '<div class="year"><div class="y">' + y + '</div><div class="evs">' + list.filter(e => e.y === y).map(e =>
+    '<div class="ev t-' + e.t + (e.tier === 2 ? " t2" : "") + '" id="ev-' + e.id + '"><button aria-expanded="false"><span class="d">' + e.d.replace(/\.?(19\d\d)$/, m => m.startsWith(".") ? "." : "") + '</span><span class="t">' + e.e + (e.tier === 2 ? '<span class="badge2">Mappe</span>' : "") + '</span><span class="chev">›</span></button>' +
+    '<div class="more" hidden><dl><dt>Datum</dt><dd><b>' + e.d + '</b> · ' + TOPIC[e.t] + '</dd><dt>Was</dt><dd>' + e.i + '</dd><dt>Warum</dt><dd>' + e.w + '</dd><dt>Merken</dt><dd>' + e.mn + '</dd>' + (e.note ? '<dt>Hinweis</dt><dd>' + e.note + '</dd>' : "") + '</dl>' +
+    '<div class="links"><a href="#ch-' + e.ch + '" data-ch="' + e.ch + '">Kapitel ' + e.ch + ': ' + CHAPTER[e.ch] + ' →</a></div></div></div>').join("") + '</div></div>').join("");
+}
+tl.addEventListener("click", ev => {
+  const a = ev.target.closest("a[data-ch]"); if (a) { document.getElementById("ch-" + a.dataset.ch).open = true; return; }
+  const b = ev.target.closest(".ev > button"); if (!b) return;
+  const box = b.parentElement, more = box.querySelector(".more");
+  if (document.body.classList.contains("hide-dates") && !box.classList.contains("shown")) { box.classList.add("shown"); return; }
+  const open = more.hidden; more.hidden = !open; b.setAttribute("aria-expanded", open); open ? box.setAttribute("open-x", "") : box.removeAttribute("open-x");
+});
+function setTopic(t) { topic = t; fAll.setAttribute("aria-pressed", t === "all"); fInnen.setAttribute("aria-pressed", t === "innen"); fAussen.setAttribute("aria-pressed", t === "aussen"); render(); }
+const fAll = document.getElementById("fAll"), fInnen = document.getElementById("fInnen"), fAussen = document.getElementById("fAussen"), fMappe = document.getElementById("fMappe"), hideBtn = document.getElementById("hideBtn");
+fAll.onclick = () => setTopic("all"); fInnen.onclick = () => setTopic("innen"); fAussen.onclick = () => setTopic("aussen");
+fMappe.onclick = () => { mappe = !mappe; fMappe.setAttribute("aria-pressed", mappe); render(); };
+hideBtn.onclick = () => { const on = document.body.classList.toggle("hide-dates"); hideBtn.setAttribute("aria-pressed", on); document.getElementById("hideNote").hidden = !on; render(); };
+document.getElementById("openAll").onclick = function () { const all = [...document.querySelectorAll("details.chap")], open = all.some(d => !d.open); all.forEach(d => d.open = open); this.textContent = open ? "Alle Kapitel zuklappen" : "Alle Kapitel aufklappen"; };
+function fromHash() { const el = location.hash && document.getElementById(location.hash.slice(1)); if (!el) return; if (el.tagName === "DETAILS") el.open = true; if (el.classList.contains("ev")) el.querySelector("button").click(); el.scrollIntoView(); }
+render(); fromHash(); addEventListener("hashchange", fromHash);
+</script>
+</body>
+</html>
