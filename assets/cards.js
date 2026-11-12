@@ -78,14 +78,14 @@ function next() {
   card.style.transition = "none"; card.classList.remove("flipped"); void card.offsetWidth; card.style.transition = "";
   $("cardwrap").className = "cardwrap t-" + c.t;
   const dots = '<span class="boxdots" title="Stufe ' + s.b + ' von 5">' + [1, 2, 3, 4, 5].map(i => '<i class="' + (i <= s.b ? "on" : "") + '"></i>').join("") + "</span>";
-  const tag = '<span class="tag">' + TOPIC[c.t] + (c.tier === 2 ? " · Mappe" : "") + "</span>" + dots;
+  const tag = '<span class="tag">' + TOPIC[c.t] + (c.tier === 2 ? " · Zeitstrahl" : "") + "</span>" + dots;
   $("fTag").innerHTML = tag; $("bTag").innerHTML = tag;
   const typing = prefs.mode === "type";
   if (front === "event") $("fBody").innerHTML = '<div class="ask">' + (c.day ? "Wann war das? Tag, Monat und Jahr" : "Wann war das? Monat und Jahr") + '</div><div class="main">' + c.e + "</div>";
   else $("fBody").innerHTML = '<div class="ask">Was geschah an diesem Datum?</div><div class="main date">' + c.d + "</div>";
   $("fHint").textContent = typing ? "Datum unten eintippen" : "Erst im Kopf antworten, dann tippen zum Umdrehen";
   const head = front === "event" ? '<div class="main date">' + c.d + '</div><div class="sub">' + c.e + "</div>" : '<div class="main">' + c.e + '</div><div class="sub" style="color:var(--c)">' + c.d + "</div>";
-  $("bBody").innerHTML = head + '<div class="info">' + c.i + '</div><div class="mn"><b>Merkhilfe</b>' + c.mn + "</div>" + around(c);
+  $("bBody").innerHTML = head + '<div class="info">' + c.i + '</div><div class="mn"><b>Merkhilfe</b>' + c.mn + "</div>" + (c.note ? '<div class="info" style="font-size:12.5px;text-align:left"><b>Hinweis:</b> ' + c.note + "</div>" : "") + around(c);
   renderAnswer(); renderProgress();
 }
 function renderProgress() {
